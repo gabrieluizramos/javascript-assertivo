@@ -4,6 +4,7 @@
   "description": "Código relacionado ao livro JavaScript Assertivo (website e exemplos)",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/gabrieluizramos/javascriptassertivo.com.br/issues"
   },
-  "homepage": "https://github.com/gabrieluizramos/javascriptassertivo.com.br#readme"
+  "homepage": "https://github.com/gabrieluizramos/javascriptassertivo.com.br#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
 }
