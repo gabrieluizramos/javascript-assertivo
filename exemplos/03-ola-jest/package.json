@@ -1,0 +1,16 @@
+{
+  "name": "03-ola-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
