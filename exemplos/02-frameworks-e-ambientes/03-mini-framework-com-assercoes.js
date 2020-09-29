@@ -1,15 +1,13 @@
-/* eslint-disable */
-
 const verifiqueQue = (valor) => {
-    const assercoes = {
-        ehExatamenteIgualA(esperado) {
-            if (valor !== esperado) { 
-                 throw {};
-            }
-        }
-    };
+  const assercoes = {
+    ehExatamenteIgualA(esperado) {
+      if (valor !== esperado) {
+        throw {};
+      }
+    }
+  };
 
-    return assercoes;
+  return assercoes;
 }
 
 const teste = (titulo, funcaoTeste) => {
@@ -17,7 +15,7 @@ const teste = (titulo, funcaoTeste) => {
 		funcaoTeste();
 		console.log(`✅ ${titulo} passou`);
 	} catch (err) {
-        console.log(`🚨 ${titulo} deu ruim...`);
+    console.log(`🚨 ${titulo} deu ruim...`);
 	}
 }
 
@@ -32,8 +30,8 @@ const calculaDesconto = (salario, descontos) => {
 
 
 teste('somaHorasExtras', () => {
-	const esperado = 10;
-	const retornado = somaHorasExtras(5, 5);
+  const esperado = 10;
+  const retornado = somaHorasExtras(5, 5);
 
 	verifiqueQue(retornado).ehExatamenteIgualA(esperado);
 });

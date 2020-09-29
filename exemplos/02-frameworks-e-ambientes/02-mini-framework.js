@@ -1,12 +1,10 @@
-/* eslint-disable */
-
 // função teste reutilizável
 const teste = (titulo, esperado, retornado) => {
-    if (esperado === retornado) {
-        console.log(`✅  ${titulo} passou`);
-    } else {
-        console.log(`🚨 ${titulo} deu ruim...`);
-    }
+  if (esperado === retornado) {
+    console.log(`✅  ${titulo} passou`);
+  } else {
+    console.log(`🚨 ${titulo} deu ruim...`);
+  }
 }
 
 // duplicamos as funções apenas para vermos as diferenças

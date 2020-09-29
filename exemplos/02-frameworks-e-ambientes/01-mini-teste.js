@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // funções a serem testadas
 const somaHorasExtras = (salario, valorHorasExtras) => {
 	return salario + valorHorasExtras;
@@ -9,7 +7,7 @@ const calculaDesconto = (salario, descontos) => {
 };
 
 // variáveis com os valores
-let esperado = 10; 
+let esperado = 10;
 let retorno = somaHorasExtras(5, 5);
 
 // testa testa função somaHorasExtras
