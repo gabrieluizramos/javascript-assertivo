@@ -1,5 +1,24 @@
 # CLI
-Essa CLI foi desenvolvida com o objetivo de elucidar os exemplos de testes do Livro. Ela possui as operações de criação e remoção de usuário, simulando um banco de dados em um arquivo em memória (`database.json`).
+Essa CLI foi desenvolvida com o objetivo de elucidar os exemplos de testes do Livro. A aplicação, basicamente, permite cadastro, remoção, atualização e leitura de usuários.
+
+## Para quem está lendo o livro
+Ao clonar esse repositório enquanto acompanha o livro, não esqueça de apagar a pasta `__tests__` para que você possa realizar os exemplos acompanhando o conteúdo.
+
+## Estrutura do projeto
+Alguns comandos utilitários (como de criação da base de dados e gerar usuário) estão disponíveis na pasta [commands](./commands), contendo seus respectivos arquivos.
+
+Na raiz do projeto existe um arquivo `cli.js` que é, basicamente o arquivo que inicia a aplicação através da CLI e importa a função principal e fornece os argumentos informado em sua execução. Também a raíz está localizado o arquivo `database.json` que será utilizado para simularmos um banco de dados contendo os dados da aplicação.
+
+A pasta `src` contém todo o código da aplicação. Embora não ocorra nenhum processo de transpilação/build, achei interessante manter essa estrutura por ser um padrão adotado no mercado. Essa pasta, por sua vez, contém a seguinte estrutura:
+- `index.js`: contém a função principal que inicia a aplicação;
+- `constants`: diretório que contém as constantes utilizadas ao longo do projeto que são, basicamente, as `roles.js` (diferentes níveis de usuário);
+- `database`: contém a "camada" que realiza a manipulação do arquivo `database.json`, sendo:
+  - `file.js`: faz a leitura/escrita do arquivo `database.json` propriamente dito;
+  - `parser.js`: faz a formatação de dados para JSON/String e vice-versa;
+  - `user`: diretório contendo as operações de `CRUD` de usuário (`create.js`, `read.js`, `remove.js`, `update.js`).
+- `operations`: diretório que contém o manuseio das operações de `CRUD`, onde serão executadas através da CLI e retornarão mensagens ao usuário (camada intermediária entre a CLI e as operações do diretório `database`), por isso contém uma estrutura de arquivos bem semelhante à da pasta `database`;
+- `utils`: diretório que contém alguns utilitários necessários para a aplicação, como o de logging (`logger.js`) e o que formata/valida os argumentos enviados via terminal (`args.js`).
+
 
 ## Instalação
 Para utilizar, basta instalar o projeto com:
