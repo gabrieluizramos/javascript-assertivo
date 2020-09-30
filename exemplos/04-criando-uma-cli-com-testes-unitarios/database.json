@@ -1,0 +1,142 @@
+[
+  {
+    "email": "iamthe@admin.com",
+    "userName": "admin",
+    "password": "admin",
+    "name": "Ad",
+    "lastName": "Min",
+    "uid": "bc2353a5-d4aa-4b05-9b68-6c864827aa28",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jnmnrd/128.jpg",
+    "role": "ADMIN"
+  },
+  {
+    "email": "Lonny.Dietrich@yahoo.com",
+    "userName": "Donna.Watsica38",
+    "password": "NNQbaKNuU7qZl31",
+    "name": "Hipolito",
+    "lastName": "Kassulke",
+    "uid": "4608e19b-d867-42aa-96b5-4f1bf171c8f9",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/iamgarth/128.jpg",
+    "role": "ADMIN"
+  },
+  {
+    "email": "Michaela49@gmail.com",
+    "userName": "Harmony75",
+    "password": "rvUBiHiKW6DK0Pm",
+    "name": "Arne",
+    "lastName": "Russel",
+    "uid": "b4610263-4788-4ff2-8f38-4dcfce273247",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/salvafc/128.jpg",
+    "role": "ADMIN"
+  },
+  {
+    "email": "Raleigh_Boyer94@hotmail.com",
+    "userName": "Syble.Ebert",
+    "password": "A10VoiyJ0x1mc0I",
+    "name": "Maegan",
+    "lastName": "Schiller",
+    "uid": "4f721091-7e5c-4836-8500-2db040b74a7e",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/layerssss/128.jpg",
+    "role": "ADMIN"
+  },
+  {
+    "email": "Mariana96@hotmail.com",
+    "userName": "Cory.Windler82",
+    "password": "6y_F6IKK1aX3W5k",
+    "name": "Effie",
+    "lastName": "Sawayn",
+    "uid": "c2edbd7b-e793-491a-8691-dba1519ce937",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/iqonicd/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Taryn38@yahoo.com",
+    "userName": "Maybelle28",
+    "password": "k0Ohk1xTBnz8TPC",
+    "name": "Amy",
+    "lastName": "Cruickshank",
+    "uid": "91d1f470-83e3-44a3-a211-3ad7a8f5b853",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/8d3k/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Johnnie.Bashirian42@yahoo.com",
+    "userName": "Catherine.Feil54",
+    "password": "Luk35WL8lutBBdV",
+    "name": "Joesph",
+    "lastName": "Daniel",
+    "uid": "316d8da5-90f1-497b-8a13-d7c69cc4b972",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/madebybrenton/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Anabel58@gmail.com",
+    "userName": "Walker_Wilderman5",
+    "password": "VyPf9X4ml1TH_aX",
+    "name": "Guido",
+    "lastName": "Wunsch",
+    "uid": "9c318822-806b-4bc0-a6a7-57c08e59fc3d",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/RussellBishop/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Oleta22@gmail.com",
+    "userName": "Jorge.Braun",
+    "password": "uMrlystUpl48RG9",
+    "name": "Green",
+    "lastName": "King",
+    "uid": "cbfb3992-f626-4f58-9ab4-8ff92840eb7a",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/blakesimkins/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Edgardo89@yahoo.com",
+    "userName": "Jamaal78",
+    "password": "lk4BsFwjNhnKZoY",
+    "name": "Emiliano",
+    "lastName": "Kertzmann",
+    "uid": "14a4e16b-d54c-491d-a437-b18b03e0c2f1",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/angelcolberg/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Jermain25@hotmail.com",
+    "userName": "Lisa31",
+    "password": "_wn9oGL92RJKjNo",
+    "name": "Rogers",
+    "lastName": "Sauer",
+    "uid": "d75710a6-5eaa-417c-8e4e-f95149669f42",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lebinoclard/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Aglae17@hotmail.com",
+    "userName": "Bridgette_Parisian35",
+    "password": "hkxRUI1Dkwrz3vd",
+    "name": "Frederick",
+    "lastName": "Mraz",
+    "uid": "26289003-de53-4805-9d99-00dd23964e8f",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/akmalfikri/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Magali_Volkman30@hotmail.com",
+    "userName": "Rhiannon6",
+    "password": "QSa5S3w4cheFWtg",
+    "name": "Leanna",
+    "lastName": "Friesen",
+    "uid": "ed53bb9c-fa04-4a58-b1bb-2f870d74d89f",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jonathansimmons/128.jpg",
+    "role": "USER"
+  },
+  {
+    "email": "Tiara62@hotmail.com",
+    "userName": "Leola_Kautzer74",
+    "password": "5mYFQeV4KQLx9m4",
+    "name": "Madeline",
+    "lastName": "Schumm",
+    "uid": "3511baa5-2939-43f1-bb2c-70b80702770d",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/garand/128.jpg",
+    "role": "USER"
+  }
+]
