@@ -2,7 +2,7 @@ import { createUser } from './user.js';
 
 import logger from '../src/utils/logger.js';
 
-const { uid, avatar, ...user } = createUser();
+const { uid, ...user } = createUser();
 
 logger.success(
  `

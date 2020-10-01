@@ -52,6 +52,32 @@ Para utilizar essa CLI, é necessário informar 4 argumentos:
 - operation: operação a ser realizada (`read`/`create`/`delete`/`update`);
 - data: dados necessários para realizar tal operação.
 
+A CLI é um CRUD simples de usuário, mas aplicando algumas validações por permissão. A ideia é que todos os usuários sejam capazes de verificar informações de qualquer usuário existente na base. Entretanto, somente usuários com permissões de administrador podem fazer qualquer modificação (como criar, deletar ou atualizar) qualquer registro.
+
+Por isso, cada cadastro é composto das seguintes campos:
+- `email`: contendo o email do usuário;
+- `userName`: contendo um nome de usuário;
+- `password`: contendo a senha;
+- `name`: contendo o nome inicial;
+- `lastName`: contendo o sobrenome;
+- `uid`: campo contendo um identificador único para cada usuário;
+- `avatar`: (opcional) contendo uma URL de foto do usuário;
+- `role`: contém o tipo de permissão dou usuário no sistema (podendo ser `USER` ou `ADMIN`).
+
+Dessa forma, um registro de usuário é formado da seguinte maneira:
+```json
+{
+  "email": "Taryn38@yahoo.com",
+  "userName": "Maybelle28",
+  "password": "k0Ohk1xTBnz8TPC",
+  "name": "Amy",
+  "lastName": "Cruickshank",
+  "uid": "91d1f470-83e3-44a3-a211-3ad7a8f5b853",
+  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/8d3k/128.jpg",
+  "role": "USER"
+}
+```
+
 Por exemplo, para realizar a criação de um usuário, basta informar os dados de autenticação, a operação e, no campo "data", informar a `string` JSON do usuário a ser cadastrado:
 ```sh
 jsassertivo --username=admin --password=admin --operation=create --data=string-json-do-usuario
