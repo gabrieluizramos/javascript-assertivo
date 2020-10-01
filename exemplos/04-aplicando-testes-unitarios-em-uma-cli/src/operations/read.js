@@ -7,11 +7,16 @@ import applyMiddlewares, { validateDataMiddleware } from '../middlewares/index.j
 const read = async ({ data }) => {
   try {
     const user = await getUserByUid(data.uid);
-    logger.log(`
-      Dados do usuário: \n
-      ------------------ \n
-      '${JSON.stringify(user, null, 2)}'
-    `);
+
+    if (user) {
+      logger.log(`
+        Dados do usuário: \n
+        ------------------ \n
+        '${JSON.stringify(user, null, 2)}'
+      `);
+    } else {
+      logger.error('Usuário inexistente');
+    }
   } catch (err) {
     logger.error('Ocorreu um erro ao ler os dados do usuário \n', err.message);
   }

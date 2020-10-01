@@ -17,7 +17,7 @@ const create = async ({ data }) => {
 }
 
 export default applyMiddlewares(
-  validateDataMiddleware(['email', 'password', 'userName', 'name', 'lastName']),
   isAdminMiddleware,
+  validateDataMiddleware(['email', 'password', 'userName', 'name', 'lastName']),
   create
 );

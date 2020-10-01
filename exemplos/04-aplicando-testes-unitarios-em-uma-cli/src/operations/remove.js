@@ -13,7 +13,7 @@ const remove = async ({ data }) => {
 }
 
 export default applyMiddlewares(
-  validateDataMiddleware(['uid']),
   isAdminMiddleware,
+  validateDataMiddleware(['uid']),
   remove
 );

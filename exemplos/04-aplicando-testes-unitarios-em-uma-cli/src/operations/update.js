@@ -15,7 +15,7 @@ const update = async ({ data }) => {
 };
 
 export default applyMiddlewares(
-  validateDataMiddleware(['uid']),
   isAdminMiddleware,
+  validateDataMiddleware(['uid']),
   update
 );

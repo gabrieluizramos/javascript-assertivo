@@ -1,6 +1,6 @@
-import { toJSON } from '../database/parser.js';
 import { validateArgs } from '../utils/args.js';
 
+// Valida valor de "data" para cada operação com seus campos necessários
 export const validateDataMiddleware = fields => args => {
   const validation = validateArgs(args.data, fields);
 
