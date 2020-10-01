@@ -1,10 +1,6 @@
 import logger from '../utils/logger.js';
 
-import applyMiddlewares, {
-  parseDataMiddleware,
-  validateDataMiddleware,
-  isAdminMiddleware
-} from '../middlewares/index.js';
+import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 import { createUser } from '../database/user/create.js';
 
 const create = async ({ data }) => {
@@ -21,7 +17,6 @@ const create = async ({ data }) => {
 }
 
 export default applyMiddlewares(
-  parseDataMiddleware,
   validateDataMiddleware(['email', 'password', 'userName', 'name', 'lastName']),
   isAdminMiddleware,
   create

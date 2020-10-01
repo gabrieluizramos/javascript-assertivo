@@ -10,11 +10,3 @@ export const validateDataMiddleware = fields => args => {
 
   return args;
 }
-
-
-export const parseDataMiddleware = raw => {
-  return {
-    ...raw,
-    data: toJSON(raw.data)
-  }
-}

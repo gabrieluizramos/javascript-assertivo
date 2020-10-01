@@ -19,7 +19,7 @@ A pasta `src` contém todo o código da aplicação. Embora não ocorra nenhum p
 - `middlewares`: arquivos que funcionam como middlewares das operações, sendo:
   - `index.js`: que aplica a lógica da cadeia de middlewares;
   - `user.js`: contém middlewares para validações de usuário (como validação de permissão);
-  - `data.js`: contém middlewares para manipular os dados enviados no campo `data`, realizando sua formatação e validação.
+  - `data.js`: contém middlewares para manipular os dados enviados no campo `data`, realizando a validação dos dados para cada operação.
 - `operations`: diretório que contém o manuseio das operações de `CRUD`, onde serão executadas através da CLI e retornarão mensagens ao usuário (camada intermediária entre a CLI e as operações do diretório `database`), por isso contém uma estrutura de arquivos bem semelhante à da pasta `database`;
 - `utils`: diretório que contém alguns utilitários necessários para a aplicação, como o de logging (`logger.js`) e o que formata/valida os argumentos enviados via terminal (`args.js`).
 

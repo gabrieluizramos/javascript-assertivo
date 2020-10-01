@@ -1,11 +1,7 @@
 import { removeUser } from '../database/user/remove.js';
 import logger from '../utils/logger.js';
 
-import applyMiddlewares, {
-  parseDataMiddleware,
-  validateDataMiddleware,
-  isAdminMiddleware
-} from '../middlewares/index.js';
+import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 
 const remove = async ({ data }) => {
   try {
@@ -17,7 +13,6 @@ const remove = async ({ data }) => {
 }
 
 export default applyMiddlewares(
-  parseDataMiddleware,
   validateDataMiddleware(['uid']),
   isAdminMiddleware,
   remove

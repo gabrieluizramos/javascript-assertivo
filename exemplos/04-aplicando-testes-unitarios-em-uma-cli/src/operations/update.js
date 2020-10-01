@@ -1,10 +1,6 @@
 import logger from '../utils/logger.js';
 
-import applyMiddlewares, {
-  parseDataMiddleware,
-  validateDataMiddleware,
-  isAdminMiddleware
-} from '../middlewares/index.js';
+import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 
 
 import { updateUserByUid } from '../database/user/update.js';
@@ -19,7 +15,6 @@ const update = async ({ data }) => {
 };
 
 export default applyMiddlewares(
-  parseDataMiddleware,
   validateDataMiddleware(['uid']),
   isAdminMiddleware,
   update
