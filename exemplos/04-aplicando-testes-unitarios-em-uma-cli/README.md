@@ -16,6 +16,10 @@ A pasta `src` contém todo o código da aplicação. Embora não ocorra nenhum p
   - `file.js`: faz a leitura/escrita do arquivo `database.json` propriamente dito;
   - `parser.js`: faz a formatação de dados para JSON/String e vice-versa;
   - `user`: diretório contendo as operações de `CRUD` de usuário (`create.js`, `read.js`, `remove.js`, `update.js`).
+- `middlewares`: arquivos que funcionam como middlewares das operações, sendo:
+  - `index.js`: que aplica a lógica da cadeia de middlewares;
+  - `user.js`: contém middlewares para validações de usuário (como validação de permissão);
+  - `data.js`: contém middlewares para manipular os dados enviados no campo `data`, realizando sua formatação e validação.
 - `operations`: diretório que contém o manuseio das operações de `CRUD`, onde serão executadas através da CLI e retornarão mensagens ao usuário (camada intermediária entre a CLI e as operações do diretório `database`), por isso contém uma estrutura de arquivos bem semelhante à da pasta `database`;
 - `utils`: diretório que contém alguns utilitários necessários para a aplicação, como o de logging (`logger.js`) e o que formata/valida os argumentos enviados via terminal (`args.js`).
 
@@ -53,9 +57,18 @@ Por exemplo, para realizar a criação de um usuário, basta informar os dados d
 jsassertivo --username=admin --password=admin --operation=create --data=string-json-do-usuario
 ```
 ### Read
-Para verificar os dados de um usuário, basta informar seu `uid` no campo data:
+Para verificar os dados de um usuário, basta informar seu `uid` no campo data.
+
+Por exemplo, um usuário com o seguinte UID:
+```json
+{
+  "uid": "3511baa5-2939-43f1-bb2c-70b80702770d",
+}
+```
+
+Para ler seus dados, basta executar:
 ```sh
-jsassertivo --username=admin --password=admin --operation=read --data={uid}
+jsassertivo --username=admin --password=admin --operation=read --data='{"uid": "3511baa5-2939-43f1-bb2c-70b80702770d"}'
 ```
 
 ### Create
@@ -80,9 +93,19 @@ jsassertivo --username=admin --password=admin --operation=create --data='
 Caso a `role` não seja informada, o padrão será `USER`.
 
 ### Remove
-Para remover um usuário, basta executar o mesmo comando mas com a operação `remove` e informar o `uid` do usuário no campo `data`:
+Para remover um usuário, basta executar o mesmo comando mas com a operação `remove` e informar o `uid` do usuário no campo `data`.
+
+Por exemplo, um usuário com o seguinte UID:
+```json
+{
+  "uid": "3511baa5-2939-43f1-bb2c-70b80702770d",
+}
+```
+
+Para atualizar qualquer campo como, por exemplo, sua `role`, bastaria informar o seguinte JSON:
+
 ```sh
-jsassertivo --username=admin --password=admin --operation=create --data={uid}
+jsassertivo --username=admin --password=admin --operation=create --data='{"uid":"3511baa5-2939-43f1-bb2c-70b80702770d", "role": "ADMIN"}'
 ```
 
 Para facilitar os testes locais, um existe um usuário com username/password `admin` criado, para que você possa executar os exemplos.

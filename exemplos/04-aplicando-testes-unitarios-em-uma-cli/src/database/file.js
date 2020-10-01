@@ -17,7 +17,7 @@ export const loadDatabase = async () => {
 
     return toJSON(database);
   } catch (err) {
-    logger.error('Erro ao carregar dados da base', err);
+    logger.error('Erro ao carregar dados da base \n', err.message);
   }
 };
 

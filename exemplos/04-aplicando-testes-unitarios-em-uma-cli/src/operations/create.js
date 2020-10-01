@@ -1,25 +1,28 @@
 import logger from '../utils/logger.js';
 
-import { validateArgs } from '../utils/args.js';
+import applyMiddlewares, {
+  parseDataMiddleware,
+  validateDataMiddleware,
+  isAdminMiddleware
+} from '../middlewares/index.js';
 import { createUser } from '../database/user/create.js';
-import { toJSON } from '../database/parser.js';
 
-export default async function create ({ data }) {
-  const payload = toJSON(data);
-  const validation = validateArgs(payload, ['email', 'password', 'userName', 'name', 'lastName']);
-
-  if (!validation.valid) {
-    return logger.error(validation.message);
-  }
-
+const create = async ({ data }) => {
   try {
-    const user = await createUser(payload);
+    const user = await createUser(data);
     logger.log(`
       Usuário criado com sucesso, os dados são: \n
       ----------------------------------------- \n
       '${JSON.stringify(user, null, 2)}'
     `)
   } catch (err) {
-    logger.error('Ocorreu um erro ao criar usuário', err);
+    logger.error('Ocorreu um erro ao criar usuário \n', err.message);
   }
 }
+
+export default applyMiddlewares(
+  parseDataMiddleware,
+  validateDataMiddleware(['email', 'password', 'userName', 'name', 'lastName']),
+  isAdminMiddleware,
+  create
+);

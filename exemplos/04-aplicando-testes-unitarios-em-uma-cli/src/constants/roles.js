@@ -1,5 +1,10 @@
 // Permissões
-export default {
+const ROLES = {
   ADMIN: 'ADMIN',
-  USER: 'USER',
+  USER: 'USER'
 };
+
+// Valida se usuário é admin
+export const isAdmin = ({ role }) => role === ROLES.ADMIN;
+
+export default ROLES;
