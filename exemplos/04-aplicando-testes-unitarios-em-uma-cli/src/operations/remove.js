@@ -6,7 +6,7 @@ import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../
 const remove = async ({ data }) => {
   try {
     const deletedUser = await removeUser(data.uid);
-    logger.log(`Usuário ${deletedUser.name} removido com sucesso.`);
+    logger.success(`Usuário ${deletedUser.name} removido com sucesso.`);
   } catch (err) {
     logger.error('Ocorreu um erro ao remover o usuário \n', err.message);
   }
