@@ -1,4 +1,4 @@
-const COLORS = {
+export const COLORS = {
   DEFAULT: "\x1b[0m",
   GREEN: "\x1b[32m",
   RED: "\x1b[31m"
