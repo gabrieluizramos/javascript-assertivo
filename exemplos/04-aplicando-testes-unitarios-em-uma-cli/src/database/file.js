@@ -1,14 +1,8 @@
 import { promises } from 'fs';
-import { dirname, resolve } from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 import logger from '../utils/logger.js';
 import { toJSON, toString } from './parser.js'
-
-// Arquivo com dados
-const databasePath = resolve(__dirname, '../../database.json');
+import path from './path.js';
 
 export const loadDatabase = async () => {
   try {
