@@ -1,9 +1,9 @@
-import { createUser } from '../../../src/database/user/create.js';
-import * as file from '../../../src/database/file.js';
-import ROLES from '../../../src/constants/roles.js'
+import { createUser } from 'database/user/create.js';
+import * as file from 'database/file.js';
+import ROLES from 'constants/roles.js'
 
-jest.mock('../../../src/database/file.js');
-jest.mock('../../../src/database/path.js');
+jest.mock('database/file.js');
+jest.mock('database/path.js');
 
 const usuario = {
   email: 'qualquer@email.com',
@@ -27,6 +27,7 @@ afterAll(() => {
 });
 
 it('Cria usuario corretamente', async () => {
+  expect.assertions(4);
   const user = await createUser(usuario);
 
   expect(file.loadDatabase).toHaveBeenCalledTimes(1);
@@ -41,6 +42,7 @@ it('Cria usuario corretamente', async () => {
 
 
 it('Cria usuario corretamente com role ADMIN', async () => {
+  expect.assertions(4);
   const user = await createUser({ ...usuario, role: ROLES.ADMIN });
 
   expect(file.loadDatabase).toHaveBeenCalledTimes(1);

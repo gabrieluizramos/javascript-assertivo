@@ -1,4 +1,4 @@
-import parse, { validateArgs } from '../../src/utils/args.js';
+import parse, { validateArgs } from 'utils/args.js';
 
 const dados = {
   username: "admin",
