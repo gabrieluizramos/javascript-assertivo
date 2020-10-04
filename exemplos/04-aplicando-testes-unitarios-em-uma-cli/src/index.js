@@ -20,6 +20,6 @@ const app = async (args) => {
 };
 
 export default applyMiddlewares(
-  cli => parse(...cli),
+  parse,
   app
 );

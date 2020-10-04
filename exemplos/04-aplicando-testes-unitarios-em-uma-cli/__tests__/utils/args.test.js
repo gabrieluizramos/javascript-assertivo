@@ -19,7 +19,7 @@ it('Faz o parse dos argumentos da CLI', () => {
     '--data={"uid": "abc-123"}'
   ];
 
- const retornado = parse(...argumentos);
+ const retornado = parse(argumentos);
 
  expect(retornado).toEqual(dados);
 });

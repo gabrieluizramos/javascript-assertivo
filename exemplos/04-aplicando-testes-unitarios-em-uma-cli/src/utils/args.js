@@ -43,7 +43,7 @@ const formatArg = ([firstDash, secondDash, ...rest]) => {
 const combineArgs = (args) => args.reduce((args, arg) => ({...args, ...arg}), {});
 
 // Faz o parse de args, pulando os dois primeiros valores que são do binário do node e da aplicação CLI
-export default function parse (_env, _bin, ...cliArgs) {
+export default function parse ([_env, _bin, ...cliArgs]) {
   const formatted = cliArgs.map(formatArg);
   const parsed = combineArgs(formatted);
 
