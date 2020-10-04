@@ -1,6 +1,5 @@
 import { createUser } from '../../../src/database/user/create.js';
 import * as file from '../../../src/database/file.js';
-import path from '../../../src/database/path.js';
 import ROLES from '../../../src/constants/roles.js'
 
 jest.mock('../../../src/database/file.js');
