@@ -21,8 +21,3 @@ export const getUserByEmailAndPassword = async (username, password) => {
 
   return user;
 };
-
-export const authenticate = async ({ username, password }) => {
-  const { token } = await getUserByEmailAndPassword(username, password);
-  return token;
-};
