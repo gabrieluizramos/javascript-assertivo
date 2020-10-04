@@ -2,7 +2,7 @@ import { promises } from 'fs';
 
 import logger from '../utils/logger.js';
 import { toJSON, toString } from './parser.js'
-import path from './path.js';
+import databasePath from './path.js';
 
 export const loadDatabase = async () => {
   try {

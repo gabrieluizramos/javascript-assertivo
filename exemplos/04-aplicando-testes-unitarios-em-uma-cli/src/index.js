@@ -6,7 +6,7 @@ import * as operations from './operations/index.js';
 
 const app = async (args) => {
   const argsValidation = validateArgs(args);
-  if (!argsValidation.valid) logger.error(argsValidation.message);
+  if (!argsValidation.valid) return logger.error(argsValidation.message);
 
   const operation = operations[args.operation];
   if (!operation) return logger.error(`Operação inválida: ${args.operation}`);
