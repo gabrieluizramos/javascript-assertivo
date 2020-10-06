@@ -1,19 +1,24 @@
+// Importa função a ser testada
 import { removeUser } from 'database/user/remove.js'
-import * as file from 'database/file.js';
 
+// Faz o mock do arquivo e das funções que salvam dados a base
+import * as file from 'database/file.js';
 jest.mock('database/path.js');
 jest.mock('database/file.js');
 
+// Cria um usuário mock
 const mockUser = {
   uid: 'abc-123',
   name: 'usuario',
   lastName: 'qualquer'
 };
 
+// Limpa todas as funções de mock ao final de cada teste
 afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Remove usuário com sucesso', async () => {
   file.loadDatabase.mockResolvedValueOnce([mockUser]);
 

@@ -29,6 +29,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Atualiza dados do usuário e loga mensagem', async () => {
   updateUserByUid.mockResolvedValueOnce();
 

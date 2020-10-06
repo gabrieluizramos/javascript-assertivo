@@ -1,6 +1,8 @@
+// Importa função a ser testada e as ROLES
 import { isAdminMiddleware } from 'middlewares/user.js'
 import ROLES from 'constants/roles.js'
 
+// Cria um usuário mock
 const mockUsuario = {
   uid: 'abc-1234',
   userName: 'nomeDeUsuario',
@@ -10,6 +12,7 @@ const mockUsuario = {
   password: 'senhasupersecreta',
 };
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Deve retornar os dados do usuário caso a role seja ADMIN', () => {
   const mockAdmin = {
     user: {

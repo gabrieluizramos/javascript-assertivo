@@ -1,5 +1,7 @@
+// Importa funções a serem testadas
 import { toJSON, toString } from 'database/parser.js'
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Converte string para objeto', () => {
   const objeto = {
     nome: 'qualquer'

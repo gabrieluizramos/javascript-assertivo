@@ -30,6 +30,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Loga dados do usuário removido da base com sucesso', async () => {
   removeUser.mockResolvedValueOnce(mockUser);
 

@@ -1,9 +1,12 @@
+// Importa função a ser testada
 import { getUserByUid } from 'database/user/read.js';
-import { loadDatabase } from 'database/file.js';
 
+// Faz o mock do arquivo e das funções que salvam dados a base
+import { loadDatabase } from 'database/file.js';
 jest.mock('database/path.js');
 jest.mock('database/file.js');
 
+// Cria um usuário mock
 const mockUsuario = {
   uid: 'abc-1234',
   userName: 'nomeDeUsuario',
@@ -14,8 +17,10 @@ const mockUsuario = {
   role: 'USER'
 };
 
+// Define retorno da função loadDatabase
 loadDatabase.mockResolvedValue([mockUsuario]);
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Encontra usuário quando encontra seu UID', async() => {
   expect.assertions(1);
   const usuario = await getUserByUid('abc-1234');
@@ -31,6 +36,7 @@ it('Dispara um erro caso usuário não seja contrado', async() => {
   }
 });
 
+// Teste de exemplo de como expect.assertions funciona
 it.skip('Deve conter pelo menos 1 asserção', async() => {
   expect.assertions(1);
   await Promise.resolve(1);

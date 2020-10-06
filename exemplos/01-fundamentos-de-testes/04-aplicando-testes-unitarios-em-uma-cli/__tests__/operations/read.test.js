@@ -30,6 +30,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Loga usuário ao consultar com sucesso', async () => {
   getUserByUid.mockResolvedValueOnce(mockUser.data);
 

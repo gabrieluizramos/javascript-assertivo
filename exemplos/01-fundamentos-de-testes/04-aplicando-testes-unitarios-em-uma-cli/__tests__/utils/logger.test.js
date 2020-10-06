@@ -1,10 +1,13 @@
+// Importa função a ser testada e as ROLES
 import logger from 'utils/logger.js';
 
+// Cria espiões para verificar as chamadas de console.log e console.error
 const spies = {
   log: jest.spyOn(console, 'log').mockImplementation(),
   error: jest.spyOn(console, 'error').mockImplementation()
 };
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 describe('Logger', () => {
   beforeEach(() => {
     jest.clearAllMocks();

@@ -29,6 +29,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Loga usuário cadastrado com sucesso', async () => {
   createUser.mockResolvedValueOnce(mockUser);
 

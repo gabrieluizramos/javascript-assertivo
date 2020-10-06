@@ -1,5 +1,7 @@
+// Importa funções a serem testadas
 import parse, { validateArgs } from 'utils/args.js';
 
+// Cria um mock dos dados que devem ser retornados
 const dados = {
   username: "admin",
   password: "admin",
@@ -9,6 +11,7 @@ const dados = {
   }
 };
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 it('Faz o parse dos argumentos da CLI', () => {
   const argumentos = [
     '/Users/gabriel.ramos/.nvm/versions/node/v14.11.0/bin/node',

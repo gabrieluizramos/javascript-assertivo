@@ -1,7 +1,8 @@
-import { promises } from 'fs';
+// Importa funções a serem testadas
 import { loadDatabase, saveDatabase } from 'database/file.js';
-import logger from 'utils/logger.js';
 
+// Realiza o mock das funções do módulo fs que lidam diretamente com o arquivo em disco
+import { promises } from 'fs';
 jest.mock('fs', () => ({
   promises: {
     writeFile: jest.fn(),
@@ -9,16 +10,21 @@ jest.mock('fs', () => ({
   }
 }));
 
+// Realiza o mock do path do arquivo database
 jest.mock('database/path.js');
 
+// Espiona o logger
+import logger from 'utils/logger.js';
 const spies = {
   error: jest.spyOn(logger, 'error').mockImplementation()
 };
 
+// Limpa todas as funções de mock ao final de cada teste
 afterEach(() => {
   jest.clearAllMocks();
 });
 
+// Testes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 describe('saveDatabase', () => {
   it('Salva dados com sucesso', async () => {
     const obj = {
