@@ -8,7 +8,14 @@ export const updateUserByUid = async ({ uid, ...information }) => {
     throw new Error(`Usuário com UID ${uid} não existe`);
   }
 
-  const updatedUsers = users.map(usr => usr.uid === uid ? ({ ...usr, ...information}) : usr);
+  const updatedUser = {
+    ...user,
+    ...information
+  };
+
+  const updatedUsers = users.map(usr => usr.uid === uid ? updatedUser : usr);
 
   await saveDatabase(updatedUsers);
+
+  return updatedUser;
 }

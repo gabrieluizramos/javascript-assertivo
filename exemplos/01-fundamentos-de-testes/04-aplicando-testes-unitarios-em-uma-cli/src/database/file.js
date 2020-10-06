@@ -16,5 +16,9 @@ export const loadDatabase = async () => {
 };
 
 export const saveDatabase = async data => {
-  await promises.writeFile(databasePath, toString(data));
+  try {
+    await promises.writeFile(databasePath, toString(data));
+  } catch (err) {
+    logger.error('Erro ao salvar dados da base \n', err.message);
+  }
 }
