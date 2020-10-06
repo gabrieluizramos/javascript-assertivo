@@ -12,7 +12,7 @@ jest.mock('fs', () => ({
 jest.mock('database/path.js');
 
 const spies = {
-  error: jest.spyOn(logger, 'error').mockImplementation(() => {})
+  error: jest.spyOn(logger, 'error').mockImplementation()
 };
 
 afterEach(() => {

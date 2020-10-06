@@ -2,10 +2,9 @@ import logger from '../utils/logger.js';
 
 import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 
-
 import { updateUserByUid } from '../database/user/update.js';
 
-const update = async ({ data }) => {
+export const update = async ({ data }) => {
   try {
     await updateUserByUid(data);
     logger.success('Dados do usuário atualizados com sucesso');

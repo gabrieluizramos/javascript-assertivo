@@ -3,7 +3,7 @@ import logger from '../utils/logger.js';
 
 import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 
-const remove = async ({ data }) => {
+export const remove = async ({ data }) => {
   try {
     const deletedUser = await removeUser(data.uid);
     logger.success(`Usuário ${deletedUser.name} removido com sucesso.`);

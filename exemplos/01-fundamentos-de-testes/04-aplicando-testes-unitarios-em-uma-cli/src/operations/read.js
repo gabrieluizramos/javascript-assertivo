@@ -4,7 +4,7 @@ import logger from '../utils/logger.js';
 
 import applyMiddlewares, { validateDataMiddleware } from '../middlewares/index.js';
 
-const read = async ({ data }) => {
+export const read = async ({ data }) => {
   try {
     const user = await getUserByUid(data.uid);
 

@@ -3,7 +3,7 @@ import logger from '../utils/logger.js';
 import applyMiddlewares, { validateDataMiddleware, isAdminMiddleware } from '../middlewares/index.js';
 import { createUser } from '../database/user/create.js';
 
-const create = async ({ data }) => {
+export const create = async ({ data }) => {
   try {
     const user = await createUser(data);
     logger.log(`
