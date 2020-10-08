@@ -29,6 +29,7 @@ const saveGenerated = async (users) => {
 
 // Cria usuários em lote
 const createUserDatabase = (admin, user) => {
+  // outras formas de fazer isso: https://medium.com/@wisecobbler/4-ways-to-populate-an-array-in-javascript-836952aea79f
   const adminUsers = Array(admin).fill().map(() => createUser({ role: ROLES.ADMIN }));
   const defaultUsers = Array(user).fill().map(() => createUser({ role: ROLES.USER }));
   const users = [
