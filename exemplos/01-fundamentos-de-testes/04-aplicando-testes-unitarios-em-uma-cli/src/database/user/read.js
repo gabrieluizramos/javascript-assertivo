@@ -11,7 +11,7 @@ export const getUserByUid = async (uid) => {
   return user;
 };
 
-export const getUserByEmailAndPassword = async (username, password) => {
+export const getUserByUsernameAndPassword = async (username, password) => {
   const data = await loadDatabase();
   const user = data.find(usr => usr.userName === username && usr.password === password);
 
