@@ -1,0 +1,66 @@
+# Variáveis
+@URL = http://localhost:8080/api
+
+# AUTH ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Faz o Login e retorna um UID pra ser usado nas chamadas autenticadas
+POST {{URL}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+# USER ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Retorna os dados de um usuário baseado em seu email
+GET {{URL}}/user?email=Oleta22@gmail.com
+Content-Type: application/json
+
+# Retorna os dados de um usuário baseado em seu email
+GET {{URL}}/user?uid=Oleta22@gmail.com
+Content-Type: application/json
+
+# Retorna os dados de um usuário baseado em seu email
+GET {{URL}}/user?uid=14a4e16b-d54c-491d-a437-b18b03e0c2f1
+Content-Type: application/json
+
+# Retorna os dados de um usuário baseado em seu email
+GET {{URL}}/user?username=Lisa31
+Content-Type: application/json
+
+# [ADMIN] Cria um usuário
+POST {{URL}}/user
+Content-Type: application/json
+
+{
+  "email": "Garnet24@gmail.com",
+  "userName": "Krystina_Thompson37",
+  "password": "s2vM8Y9RJYXNpkz",
+  "name": "Willie",
+  "lastName": "Langworth",
+  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marakasina/128.jpg",
+  "role": "USER"
+}'
+
+
+# [ADMIN] Atualiza um usuário
+PATCH {{URL}}/user
+Content-Type: application/json
+
+{
+  "uid": "26289003-de53-4805-9d99-00dd23964e8f",
+  "name": "FooBarNamed"
+}
+
+# [ADMIN] Deleta um usuário
+DELETE  {{URL}}/user
+Content-Type: application/json
+
+{
+  "uid": "26289003-de53-4805-9d99-00dd23964e8f"
+}
+
+# USERS :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Retorna a lista de todos os usuários
+GET {{URL}}/users
+Content-Type: application/json

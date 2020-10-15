@@ -1,0 +1,29 @@
+{
+  "name": "02-testando-aplicacoes-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "start:debug": "nodemon --inspect .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "jsassertivo": "file://../01-fundamentos-de-testes/04-aplicando-testes-unitarios-em-uma-cli/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "babel-jest": "^26.5.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^26.5.3",
+    "nodemon": "^2.0.4"
+  }
+}

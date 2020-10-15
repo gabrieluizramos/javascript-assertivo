@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "937bc844-2128-4984-ba05-b339d9672d44",
+		"name": "jsassertivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Authenticate user by a username and passwod"
+			},
+			"response": []
+		},
+		{
+			"name": "/user?email={email}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user?email=Magali_Volkman30@hotmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "Magali_Volkman30@hotmail.com"
+						}
+					]
+				},
+				"description": "Find a user by a given email"
+			},
+			"response": []
+		},
+		{
+			"name": "/user?uid={uid}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user?uid=9c318822-806b-4bc0-a6a7-57c08e59fc3d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "uid",
+							"value": "9c318822-806b-4bc0-a6a7-57c08e59fc3d"
+						}
+					]
+				},
+				"description": "Find a user by a given uid"
+			},
+			"response": []
+		},
+		{
+			"name": "/user?username={username}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user?username=Jamaal78",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Jamaal78"
+						}
+					]
+				},
+				"description": "Find a user by a given username"
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"Amari_Ward10@gmail.com\",\n  \"userName\": \"Emma74\",\n  \"password\": \"yPThkNCOIJJyQPj\",\n  \"name\": \"Wade\",\n  \"lastName\": \"Wolff\",\n  \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/smalonso/128.jpg\",\n  \"role\": \"USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Create user by a given data"
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\": \"c2edbd7b-e793-491a-8691-dba1519ce937\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Deletes a user by a given UID"
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uid\": \"c2edbd7b-e793-491a-8691-dba1519ce937\",\n\t\"userName\": \"FooBar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Updates user by a given UID and extra information"
+			},
+			"response": []
+		},
+		{
+			"name": "/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Find a user by a given uid"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
