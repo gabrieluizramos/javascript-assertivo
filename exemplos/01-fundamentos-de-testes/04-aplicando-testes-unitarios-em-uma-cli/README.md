@@ -2,7 +2,7 @@
 Essa CLI foi desenvolvida com o objetivo de elucidar os exemplos de testes do Livro. A aplicação, basicamente, permite cadastro, remoção, atualização e leitura de usuários.
 
 ## Para quem está lendo o livro
-Ao clonar esse repositório enquanto acompanha o livro, não esqueça de apagar a pasta `__tests__` para que você possa realizar os exemplos acompanhando o conteúdo.
+Ao clonar esse repositório enquanto acompanha o livro, não esqueça de apagar a pasta `__tests__` e o arquivo `jest.config.js` para que você possa realizar os exemplos acompanhando o conteúdo.
 
 ## Estrutura do projeto
 Alguns comandos utilitários (como de criação da base de dados e gerar usuário) estão disponíveis na pasta [commands](./commands), contendo seus respectivos arquivos.
