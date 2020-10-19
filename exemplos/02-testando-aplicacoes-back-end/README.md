@@ -13,5 +13,5 @@ Na raíz do projeto, temos 2 pastas principais:
   - `controllers`: contém o código que vai interagir, de fato, com uma requisição ao final de uma cadeia de `middlewares`, para as rotas de `auth`, `user` e `users`;
   - `middlewares`: seguem o mesmo fundamento que vimos na CLI;
   - `routes`: contém as especificações e criação das rotas da API, sendo `auth`, `users` e `users`;
-  - `services`: contém apenas alguns métodos para listagem de usuários que não foram criados na CLI anteriormente mas são interessantes para aplicação, ou seja, atua como uma camada intermediária, acessando os dados da CLI e aplicando os filtros necessários.
+  - `services`: contém alguns métodos para listagem de usuários que não foram criados na CLI anteriormente mas são interessantes para aplicação e também atua como uma camada intermediária, acessando os dados da CLI e aplicando os filtros caso seja necessário;
   - `index.js`: exporta a função principal que inicia o servidor e inicia as rotas.

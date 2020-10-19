@@ -1,11 +1,10 @@
-import { createUser } from 'jsassertivo/src/database/user/create.js'
-import { removeUser } from 'jsassertivo/src/database/user/remove.js'
-import { updateUserByUid } from 'jsassertivo/src/database/user/update.js'
-
 import logger from 'jsassertivo/src/utils/logger.js';
 
+// Services
 import findUser, { basedOnQuery } from '../services/user/find.js';
-
+import { createUser } from '../services/user/create.js'
+import { removeUser } from '../services/user/remove.js'
+import { updateUserByUid } from '../services/user/update.js'
 
 export const list = async (req, res) => {
   try {

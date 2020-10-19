@@ -40,7 +40,7 @@ Content-Type: application/json
   "lastName": "Langworth",
   "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/marakasina/128.jpg",
   "role": "USER"
-}'
+}
 
 
 # [ADMIN] Atualiza um usuário

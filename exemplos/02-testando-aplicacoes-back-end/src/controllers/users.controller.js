@@ -1,10 +1,11 @@
 import logger from 'jsassertivo/src/utils/logger.js';
 
-import findUser from '../services/user/find.js';
+// Services
+import { findAll } from '../services/users/find.js';
 
 export const list = async (req, res) => {
   try {
-    const data = await findUser.all();
+    const data = await findAll();
 
     return res.json(data);
   } catch(err) {

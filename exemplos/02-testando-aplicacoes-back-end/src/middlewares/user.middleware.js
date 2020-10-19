@@ -1,9 +1,12 @@
+// CLI Middlewares
 import { isAdminMiddleware, validateDataMiddleware } from 'jsassertivo/src/middlewares/index.js';
-import { getUserByUid } from 'jsassertivo/src/database/user/read.js';
+
+// Services
+import find from '../services/user/find.js';
 
 export const getUserData = async (req, res, next) => {
   try {
-    const user = await getUserByUid(req.cookies.uid);
+    const user = await find.uid(req.cookies.uid);
     req.user = user;
 
     return next();
@@ -15,7 +18,7 @@ export const getUserData = async (req, res, next) => {
 export const validateToken = async (req, res, next) => {
   try {
     if (!req.user) {
-      return res.status(401).json({ error: 'Token inválido' })
+      return res.status(401).json({ error: 'Token inválido' });
     }
 
     return next();
@@ -26,7 +29,7 @@ export const validateToken = async (req, res, next) => {
 
 export const isAdmin = async (req, res, next) => {
   try {
-    isAdminMiddleware(req)
+    isAdminMiddleware(req);
     return next();
   } catch ({ message }) {
     return res.status(401).json({ message })
@@ -37,8 +40,8 @@ export const validateBody = fields => (req, res, next) => {
   try {
     const payload = {
       data: req.body
-    }
-    validateDataMiddleware(fields)(payload)
+    };
+    validateDataMiddleware(fields)(payload);
 
     return next();
   } catch ({ message }) {

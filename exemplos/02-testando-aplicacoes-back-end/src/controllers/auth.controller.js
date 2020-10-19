@@ -1,9 +1,11 @@
-import { getUserByUsernameAndPassword } from 'jsassertivo/src/database/user/read.js'
 import logger from 'jsassertivo/src/utils/logger.js';
+
+// Services
+import findUser from '../services/user/find.js'
 
 export const authenticate = async (req, res) => {
   try {
-    const { uid } = await getUserByUsernameAndPassword(req.body.username, req.body.password);
+    const { uid } = await findUser.usernameAndPassword(req.body.username, req.body.password);
     res.cookie('uid', uid);
 
     return res.json({ uid });
