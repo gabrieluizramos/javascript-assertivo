@@ -1,9 +1,12 @@
+// CLI Middlewares
 import { isAdminMiddleware, validateDataMiddleware } from 'jsassertivo/src/middlewares/index.js';
-import { getUserByUid } from 'jsassertivo/src/database/user/read.js';
+
+// Services
+import find from '../services/user/find.js';
 
 export const getUserData = async (req, res, next) => {
   try {
-    const user = await getUserByUid(req.cookies.uid);
+    const user = await find.uid(req.cookies.uid);
     req.user = user;
 
     return next();
