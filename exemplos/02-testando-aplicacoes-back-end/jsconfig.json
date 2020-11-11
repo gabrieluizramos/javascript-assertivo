@@ -5,6 +5,7 @@
       "*": ["src/*"],
       "controllers/*": ["src/controllers/*"],
       "middlewares/*": ["src/middlewares/*"],
+      "services/*": ["src/services/*"],
       "utils/*": ["utils/*"]
     }
   },
