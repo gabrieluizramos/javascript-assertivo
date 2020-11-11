@@ -20,6 +20,12 @@ export const createRes = (extra) => {
   return res;
 };
 
+export const createNext = () => {
+  const next = jest.fn();
+
+  return next;
+};
+
 export const createAuth = (extra) => {
   const auth = {
     username: faker.internet.userName(),

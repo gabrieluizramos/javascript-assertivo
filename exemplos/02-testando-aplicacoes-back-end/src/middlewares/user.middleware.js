@@ -11,30 +11,29 @@ export const getUserData = async (req, res, next) => {
 
     return next();
   } catch (err) {
-    res.status(401).json({ error: 'Usuário não autenticado' });
+    res.status(401).json({ message: 'Usuário não autenticado' });
     return next(err);
   }
 }
 
-export const validateToken = async (req, res, next) => {
-  try {
-    if (!req.user) {
-      return res.status(401).json({ error: 'Token inválido' });
-    }
+export const validateToken = (req, res, next) => {
+  if (!req.user) {
+    const error = new TypeError('Token inválido');
 
-    return next();
-  } catch (err) {
-    return next(err);
+    res.status(401).json({ message: error.message });
+    return next(error);
   }
+
+  return next();
 }
 
-export const isAdmin = async (req, res, next) => {
+export const isAdmin = (req, res, next) => {
   try {
     isAdminMiddleware(req);
     return next();
   } catch (err) {
     res.status(401).json({ message: err.message })
-    return next(error);
+    return next(err);
   }
 }
 

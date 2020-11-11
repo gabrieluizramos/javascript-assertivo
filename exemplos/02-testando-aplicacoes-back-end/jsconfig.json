@@ -4,6 +4,7 @@
     "paths": {
       "*": ["src/*"],
       "controllers/*": ["src/controllers/*"],
+      "middlewares/*": ["src/middlewares/*"],
       "utils/*": ["utils/*"]
     }
   },

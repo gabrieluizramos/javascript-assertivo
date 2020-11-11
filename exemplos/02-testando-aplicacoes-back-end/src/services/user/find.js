@@ -3,7 +3,7 @@ import { loadDatabase } from 'jsassertivo/src/database/file.js';
 // Usa getUserByUid diretamente da CLI
 import { getUserByUid, getUserByUsernameAndPassword } from 'jsassertivo/src/database/user/read.js';
 
-const getUserByUsername = async (username) => {
+export const getUserByUsername = async (username) => {
   const data = await loadDatabase();
   const user = data.find(usr => usr.userName === username);
 
@@ -14,7 +14,7 @@ const getUserByUsername = async (username) => {
   return user;
 }
 
-const getUserByEmail = async (email) => {
+export const getUserByEmail = async (email) => {
   const data = await loadDatabase();
   const user = data.find(usr => usr.email === email);
 
@@ -25,8 +25,7 @@ const getUserByEmail = async (email) => {
   return user;
 }
 
-export const priorities = ['uid', 'email', 'username'];
-
+const priorities = ['uid', 'email', 'username'];
 export const basedOnQuery = (query) => {
   const foundPriority = priorities.find(priority => !!query[priority]);
 
