@@ -24,24 +24,24 @@ export const create = async (req, res) => {
     return res.status(201).json(user);
   } catch (err) {
     logger.error('Ocorreu um erro ao criar usuário', err);
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: err.message });
   }
 }
 
 export const update = async (req, res) => {
   try {
     const user = await updateUserByUid(req.body);
-    return res.status(202).json({ user })
+    return res.status(202).json(user);
   } catch (err) {
     logger.error('Ocorreu um erro ao atualizar usuário', err);
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: err.message });
   }
 }
 
 export const remove = async (req, res) => {
   try {
     const user = await removeUser(req.body.uid);
-    return res.status(202).json({ user })
+    return res.status(202).json(user)
   } catch (err) {
     logger.error('Ocorreu um erro ao remover usuário', err);
     return res.status(500).json({ message: err.message });

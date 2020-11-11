@@ -2,10 +2,12 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "*": ["src/*"]
+      "*": ["src/*"],
+      "controllers/*": ["src/controllers/*"],
+      "utils/*": ["utils/*"]
     }
   },
-  "include": ["src", "__tests__"],
+  "include": ["src", "utils", "__tests__"],
   "exclude": [
     "node_modules"
   ]
