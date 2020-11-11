@@ -11,7 +11,8 @@ export const getUserData = async (req, res, next) => {
 
     return next();
   } catch (err) {
-    return res.status(401).json({ error: 'Usuário não autenticado' });
+    res.status(401).json({ error: 'Usuário não autenticado' });
+    return next(err);
   }
 }
 
@@ -31,8 +32,9 @@ export const isAdmin = async (req, res, next) => {
   try {
     isAdminMiddleware(req);
     return next();
-  } catch ({ message }) {
-    return res.status(401).json({ message })
+  } catch (err) {
+    res.status(401).json({ message: err.message })
+    return next(error);
   }
 }
 
@@ -44,8 +46,9 @@ export const validateBody = fields => (req, res, next) => {
     validateDataMiddleware(fields)(payload);
 
     return next();
-  } catch ({ message }) {
-    return res.status(400).json({ message })
+  } catch (err) {
+    res.status(400).json({ message: err.message })
+    return next(err);
   }
 }
 
