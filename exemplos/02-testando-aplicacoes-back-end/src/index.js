@@ -8,7 +8,7 @@ import routes from './routes/index.js';
 import middlewares, { error } from './middlewares/index.js';
 
 // Função que inicia o servidor
-export default function start (port = 8080) {
+export default function start (port) {
   // Instancia a aplicação
   const app = express();
 
@@ -23,7 +23,7 @@ export default function start (port = 8080) {
 
   // Loga inicio e armazena retorno
   const server = app.listen(port, () => {
-    logger.success(`Servidor rodando na porta ${port}`)
+    logger.success(`Servidor rodando na porta ${server.address().port}`);
   });
 
   // Retorna instância do servidor que pode ser encerrada posteriormente
