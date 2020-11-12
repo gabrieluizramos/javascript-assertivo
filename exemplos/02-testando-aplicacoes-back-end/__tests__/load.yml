@@ -1,0 +1,13 @@
+config:
+  target: http://localhost:8080/api
+  phases:
+    - duration: 15
+      arrivalRate: 1
+
+scenarios:
+  - flow:
+      - post:
+          url: /auth/login
+          json:
+              username: admin
+              password: admin

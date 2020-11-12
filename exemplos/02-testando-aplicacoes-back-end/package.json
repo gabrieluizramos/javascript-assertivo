@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:integration": "npm test ./__tests__/*.integration.*",
-    "test:integration:watch": "npm run test:integration -- -- --watch"
+    "test:integration:watch": "npm run test:integration -- -- --watch",
+    "test:load": "artillery run __tests__/load.yml"
   },
   "keywords": [],
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br)",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "artillery": "^1.6.1",
     "axios": "^0.21.0",
     "babel-jest": "^26.5.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
