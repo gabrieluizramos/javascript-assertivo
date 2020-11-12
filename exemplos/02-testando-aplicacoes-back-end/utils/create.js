@@ -1,6 +1,12 @@
+// Utilitários
 import faker from 'faker';
-import { createUser as generateUserCommand } from 'jsassertivo/commands/user';
+import axios from 'axios';
 
+// CLI
+import { createUser as createUserCLI } from 'jsassertivo/commands/user';
+import ROLES from 'jsassertivo/src/constants/roles';
+
+// Express ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 export const createReq = (extra) => {
   const req = {
     body: {},
@@ -26,6 +32,12 @@ export const createNext = () => {
   return next;
 };
 
+export const createError = (message = 'Ocorreu um erro ao executar operação') => {
+  const error = new Error(message);
+  return error;
+};
+
+// Usuários :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 export const createAuth = (extra) => {
   const auth = {
     username: faker.internet.userName(),
@@ -35,7 +47,7 @@ export const createAuth = (extra) => {
   return auth;
 };
 
-export const createUser = generateUserCommand;
+export const createUser = createUserCLI;
 
 export const createUserList = (length = 10) => {
   const list = Array.from({ length }, createUser);
@@ -43,7 +55,28 @@ export const createUserList = (length = 10) => {
   return list;
 };
 
-export const createError = (message = 'Ocorreu um erro ao executar operação') => {
-  const error = new Error(message);
-  return error;
+export const createUserListWithAdmin = () => {
+  const list = createUserList();
+  list[0].role = ROLES.ADMIN;
+
+  return list;
+};
+
+// Integração :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+const responseHandler = response => response;
+export const clientHTTP = {
+  create: (server) => {
+    const { port } = server.address();
+    const baseURL = `http://localhost:${port}/api`;
+    const client = axios.create({ baseURL });
+    client.interceptors.response.use(responseHandler, responseHandler);
+
+    return client;
+  },
+  authenticate: (client, user) => {
+    const authenticated = client;
+    authenticated.defaults.headers.cookie = `uid=${user.uid};`;
+
+    return authenticated;
+  },
 };
