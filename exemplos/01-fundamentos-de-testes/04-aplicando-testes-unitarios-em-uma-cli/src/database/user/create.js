@@ -9,11 +9,12 @@ export const createUser = async ({
   userName,
   name,
   lastName,
-  role = ROLES.USER
+  role = ROLES.USER,
+  ...rest
 }) => {
   const users = await loadDatabase();
   const uid = faker.random.uuid();
-  const user = { email, password, userName, name, lastName, role, uid };
+  const user = { email, password, userName, name, lastName, role, uid, ...rest };
 
   users.push(user);
   await saveDatabase(users);
