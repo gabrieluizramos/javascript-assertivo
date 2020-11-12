@@ -11,6 +11,6 @@ export const authenticate = async (req, res) => {
     return res.json({ uid });
   } catch(err) {
     logger.error('Ocorreu um erro ao autenticar usuários', err);
-    return res.status(404).json(err);
+    return res.status(404).json({ message: 'Usuário não existente' });
   }
 }

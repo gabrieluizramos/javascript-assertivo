@@ -2,7 +2,7 @@
 import { authenticate } from 'controllers/auth.controller';
 
 // Utils
-import { createReq, createRes, createAuth } from 'utils/create';
+import { createReq, createRes, createAuth, createError } from 'utils/create';
 
 // Mock Logger
 import logger from 'jsassertivo/src/utils/logger.js';
@@ -49,7 +49,7 @@ it('Dispara um erro e retorna 404 caso o usuário não seja encontrado', async (
   const req = createReq({ body: createAuth() });
   const res = createRes();
 
-  const erro = 'usuário não existente';
+  const erro = createError('Usuário não existente');
   findUser.usernameAndPassword.mockRejectedValueOnce(erro);
 
   await authenticate(req, res);
@@ -64,5 +64,5 @@ it('Dispara um erro e retorna 404 caso o usuário não seja encontrado', async (
   expect(res.status).toHaveBeenCalledWith(404);
 
   expect(res.json).toHaveBeenCalledTimes(1);
-  expect(res.json).toHaveBeenCalledWith(erro);
+  expect(res.json).toHaveBeenCalledWith({ message: erro.message });
 });

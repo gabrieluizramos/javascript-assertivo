@@ -41,6 +41,7 @@ export const update = async (req, res) => {
 export const remove = async (req, res) => {
   try {
     const user = await removeUser(req.body.uid);
+
     return res.status(202).json(user)
   } catch (err) {
     logger.error('Ocorreu um erro ao remover usuário', err);
