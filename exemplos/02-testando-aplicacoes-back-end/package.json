@@ -6,9 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon .",
-    "start:debug": "nodemon --inspect-brk .",
+    "start:debug": "nodemon --inspect .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "npm test -- --watch",
+    "test:integration": "npm test ./__tests__/*.integration.*",
+    "test:integration:watch": "npm run test:integration -- -- --watch"
   },
   "keywords": [],
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br)",
