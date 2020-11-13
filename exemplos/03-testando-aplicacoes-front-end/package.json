@@ -1,5 +1,5 @@
 {
-  "name": "03-testando-aplicacoes-front-end",
+  "name": "@jsassertivo/frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +10,13 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "styled-icons": "^10.22.0",
+    "web-vitals": "^0.2.4",
+    "@jsassertivo/backend": "file://../02-testando-aplicacoes-back-end",
+    "@jsassertivo/cli": "file://../01-fundamentos-de-testes/04-aplicando-testes-unitarios-em-uma-cli/"
   },
   "scripts": {
+    "start:api": "node node_modules/@jsassertivo/backend",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
