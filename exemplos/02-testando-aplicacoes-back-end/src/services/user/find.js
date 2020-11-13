@@ -1,7 +1,7 @@
-import { loadDatabase } from 'jsassertivo/src/database/file.js';
+import { loadDatabase } from '@jsassertivo/cli/src/database/file.js';
 
 // Usa getUserByUid diretamente da CLI
-import { getUserByUid, getUserByUsernameAndPassword } from 'jsassertivo/src/database/user/read.js';
+import { getUserByUid, getUserByUsernameAndPassword } from '@jsassertivo/cli/src/database/user/read.js';
 
 export const getUserByUsername = async (username) => {
   const data = await loadDatabase();

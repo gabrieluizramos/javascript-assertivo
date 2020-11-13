@@ -1,1 +1,1 @@
-export { loadDatabase as findAll } from 'jsassertivo/src/database/file.js';
+export { loadDatabase as findAll } from '@jsassertivo/cli/src/database/file.js';

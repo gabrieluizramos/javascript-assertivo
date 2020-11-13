@@ -1,1 +1,1 @@
-export { updateUserByUid } from 'jsassertivo/src/database/user/update.js'
+export { updateUserByUid } from '@jsassertivo/cli/src/database/user/update.js'

@@ -3,8 +3,8 @@ import faker from 'faker';
 import axios from 'axios';
 
 // CLI
-import { createUser as createUserCLI } from 'jsassertivo/commands/user';
-import ROLES from 'jsassertivo/src/constants/roles';
+import { createUser as createUserCLI } from '@jsassertivo/cli/commands/user';
+import ROLES from '@jsassertivo/cli/src/constants/roles';
 
 // Express ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 export const createReq = (extra) => {

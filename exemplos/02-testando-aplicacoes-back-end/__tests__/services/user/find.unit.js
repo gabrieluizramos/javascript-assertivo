@@ -5,8 +5,8 @@ import { getUserByUsername, getUserByEmail, basedOnQuery } from 'services/user/f
 import { createUser, createUserList } from 'utils/create';
 
 // Mock database
-import { loadDatabase } from 'jsassertivo/src/database/file.js';
-jest.mock('jsassertivo/src/database/file.js');
+import { loadDatabase } from '@jsassertivo/cli/src/database/file.js';
+jest.mock('@jsassertivo/cli/src/database/file.js');
 
 afterEach(() => {
   jest.clearAllMocks();

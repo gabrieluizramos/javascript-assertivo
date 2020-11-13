@@ -1,5 +1,5 @@
 import express from 'express';
-import logger from 'jsassertivo/src/utils/logger.js';
+import logger from '@jsassertivo/cli/src/utils/logger.js';
 
 // Rotas principais
 import routes from './routes/index.js';

@@ -5,7 +5,7 @@ import { getUserData, validateToken, isAdmin, validateBody } from 'middlewares/u
 import { createReq, createRes, createNext, createUser, createError } from 'utils/create';
 
 // Roles
-import ROLES from 'jsassertivo/src/constants/roles';
+import ROLES from '@jsassertivo/cli/src/constants/roles';
 
 // Mock service
 import service from 'services/user/find';

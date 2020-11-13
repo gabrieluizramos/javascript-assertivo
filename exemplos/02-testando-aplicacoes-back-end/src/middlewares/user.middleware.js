@@ -1,5 +1,5 @@
 // CLI Middlewares
-import { isAdminMiddleware, validateDataMiddleware } from 'jsassertivo/src/middlewares/index.js';
+import { isAdminMiddleware, validateDataMiddleware } from '@jsassertivo/cli/src/middlewares/index.js';
 
 // Services
 import find from '../services/user/find.js';

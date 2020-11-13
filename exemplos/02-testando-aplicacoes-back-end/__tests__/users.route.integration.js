@@ -5,9 +5,9 @@ import app from '../src/index';
 import { createUserListWithAdmin, clientHTTP } from 'utils/create';
 
 // Mocks
-import { loadDatabase } from 'jsassertivo/src/database/file.js';
-jest.mock('jsassertivo/src/database/file.js');
-jest.mock('jsassertivo/src/utils/logger.js');
+import { loadDatabase } from '@jsassertivo/cli/src/database/file.js';
+jest.mock('@jsassertivo/cli/src/database/file.js');
+jest.mock('@jsassertivo/cli/src/utils/logger.js');
 
 const users = createUserListWithAdmin();
 const [admin] = users;

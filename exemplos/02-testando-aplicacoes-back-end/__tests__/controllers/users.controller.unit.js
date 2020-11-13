@@ -5,8 +5,8 @@ import { list } from 'controllers/users.controller';
 import { createReq, createRes, createUserList, createError } from 'utils/create';
 
 // Mock Logger
-import logger from 'jsassertivo/src/utils/logger.js';
-jest.mock('jsassertivo/src/utils/logger.js');
+import logger from '@jsassertivo/cli/src/utils/logger.js';
+jest.mock('@jsassertivo/cli/src/utils/logger.js');
 
 // Mock Service
 import * as findUsers from 'services/users/find';

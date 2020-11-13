@@ -1,1 +1,1 @@
-export { removeUser } from 'jsassertivo/src/database/user/remove.js';
+export { removeUser } from '@jsassertivo/cli/src/database/user/remove.js';

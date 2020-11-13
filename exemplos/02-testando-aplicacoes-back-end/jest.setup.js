@@ -1,1 +1,1 @@
-jest.mock('jsassertivo/src/database/path.js');
+jest.mock('@jsassertivo/cli/src/database/path.js');

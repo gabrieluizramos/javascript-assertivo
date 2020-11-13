@@ -1,4 +1,4 @@
-import logger from 'jsassertivo/src/utils/logger.js';
+import logger from '@jsassertivo/cli/src/utils/logger.js';
 
 // Services
 import findUser from '../services/user/find.js'
