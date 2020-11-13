@@ -1,9 +1,19 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
   html,
   body {
     font-family: arial;
+    height: 100%;
+  }
+
+  body {
+    ${({ theme }) => css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: ${theme.colors.post.background};
+    `}
   }
 
   * {
