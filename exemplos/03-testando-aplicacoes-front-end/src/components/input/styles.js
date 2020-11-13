@@ -20,6 +20,7 @@ export const Fieldset = styled.fieldset`
     border-radius: ${theme.radius.default};
     background: ${theme.colors.white};
     align-items: center;
+    border: 1px solid ${theme.colors.post.color};
   `}
 `;
 
@@ -28,7 +29,7 @@ export const Icon = styled.span`
     padding: 0 ${theme.spacing.half};
     width: 35px;
     cursor: pointer;
-    color: ${theme.colors.terminal.blue.default};
+    color: ${theme.colors.post.color};
   `}
 `;
 

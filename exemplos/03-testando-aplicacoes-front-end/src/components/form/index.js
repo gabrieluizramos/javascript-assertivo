@@ -81,7 +81,7 @@ const Form = ({
           )
         })
       }
-      <Button disabled={disabled}>{schema.submit}</Button>
+      <Button disabled={disabled} {...schema.buttonProps} >{schema.submit}</Button>
     </form>
   );
 }
