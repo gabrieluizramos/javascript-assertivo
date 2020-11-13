@@ -2,11 +2,12 @@ import React from 'react';
 
 import Reset from '../styles/reset';
 import ThemeProvider from './theme';
+import Routes from './routes';
 
-const Providers = ({ children }) => (
+const Providers = () => (
   <ThemeProvider>
     <Reset />
-    {children}
+    <Routes />
   </ThemeProvider>
 );
 

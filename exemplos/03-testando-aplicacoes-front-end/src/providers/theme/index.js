@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 const Provider = ({ children }) => (
   <ThemeProvider theme={theme}>
