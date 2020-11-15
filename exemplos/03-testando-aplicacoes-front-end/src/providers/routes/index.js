@@ -9,11 +9,11 @@ const Routes = () => (
     <Switch>
       {routes.map(({
         path,
-        Page,
+        page: Page,
         auth = false,
         Route = auth ? PrivateRoute : BaseRoute
       }) => (
-        <Route path={path}>
+        <Route path={path} key={`route-${path}`}>
           <Page />
         </Route>
       ))}

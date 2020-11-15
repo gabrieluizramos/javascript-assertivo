@@ -5,13 +5,13 @@ export const home = '/';
 
 export default [
   {
+    page: Dashboard,
     path: '/dashboard',
-    Page: Dashboard,
     auth: true
   },
   {
-    path: home,
-    Page: Login
+    page: Login,
+    path: home
   }
 ];
 
