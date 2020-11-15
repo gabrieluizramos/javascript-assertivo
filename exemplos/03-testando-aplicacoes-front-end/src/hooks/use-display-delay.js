@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import timer from '../clients/timer';
+import { setTimeout } from '../clients/timer';
 
 const DEFAULT_DELAY_MS = 500;
 const DEFAULT_TIMEOUT_MS = 5000;
@@ -21,7 +21,7 @@ export const useDisplayDelay = ({
   const [active, setActive] = useState(false);
 
   const remove = () => {
-    timer.timeout(() => {
+    setTimeout(() => {
       setStatus(STATUS.UNMOUNTED);
       onUnmount && onUnmount();
     }, delay);
@@ -38,11 +38,11 @@ export const useDisplayDelay = ({
   };
 
   useEffect(() => {
-    timer.timeout(() => {
+    setTimeout(() => {
       activate();
     }, delay);
 
-    timer.timeout(() => {
+    setTimeout(() => {
       deactivate();
     }, timeout);
   }, []);

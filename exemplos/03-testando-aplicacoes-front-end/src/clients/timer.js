@@ -1,5 +1,1 @@
-const timer = {
-  timeout: window.setTimeout
-};
-
-export default timer;
+export const setTimeout = window.setTimeout;
