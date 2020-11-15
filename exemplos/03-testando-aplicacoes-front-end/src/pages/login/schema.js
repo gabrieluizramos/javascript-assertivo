@@ -1,10 +1,10 @@
 export default {
   fields: [
     {
-      type: 'email',
-      name: 'email',
-      placeholder: 'seu@email.com.br',
-      validations: 'isEmail'
+      type: 'text',
+      name: 'username',
+      placeholder: 'usuario',
+      validations: 'isRequired'
     },
     {
       type: 'password',
