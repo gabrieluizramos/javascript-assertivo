@@ -22,7 +22,7 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "@jsassertivo/cli": "file://../01-fundamentos-de-testes/04-aplicando-testes-unitarios-em-uma-cli/"
+    "@jsassertivo/cli": "file://../02-aplicando-testes-unitarios-em-uma-cli/"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

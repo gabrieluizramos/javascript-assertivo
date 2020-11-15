@@ -19,7 +19,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start:api": "node ../02-testando-aplicacoes-back-end",
+    "start:api": "node ../03-testando-aplicacoes-back-end",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
