@@ -14,6 +14,7 @@ const Button = ({ children, icon, ...props }) => {
 
 Button.propTypes = {
   type: PropTypes.oneOf([
+    '',
     'blue',
     'red',
     'yellow',

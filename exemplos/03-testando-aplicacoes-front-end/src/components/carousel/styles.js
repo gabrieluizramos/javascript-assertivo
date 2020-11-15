@@ -9,8 +9,8 @@ export const SCROLL_VALUE = CAROUSEL_ITEM_WIDTH * ITEMS_PER_VIEW + SPACE_BETWEEN
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     margin: 0 auto;
-    max-width: calc(1200px + (${theme.spacing.default} * 3));
-    width: 100%;
+    width: calc(1200px + (${theme.spacing.default} * 3));
+    max-width: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
         right: -50px;
       }
 
-      @media (max-width: 800px) {
+      @media (max-width: 1200px) {
         display: none;
       }
     }

@@ -14,6 +14,7 @@ const Card = ({ children, ...props }) => {
 
 Card.propTypes = {
   spacing: PropTypes.oneOf([
+    '',
     'half',
     'default',
     'onehalf',

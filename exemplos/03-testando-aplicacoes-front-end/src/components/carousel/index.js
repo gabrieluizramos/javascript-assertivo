@@ -8,7 +8,7 @@ import { ArrowIosForwardOutline as RightIcon } from '@styled-icons/evaicons-outl
 
 import * as S from './styles';
 
-const Carousel = ({ items, editable }) => {
+const Carousel = ({ items, editable, onClickDelete, onClickEdit }) => {
   const ref = useRef(null);
 
   const onClickNext = () => {
@@ -24,7 +24,12 @@ const Carousel = ({ items, editable }) => {
       <S.Carousel ref={ref}>
         {items.map(item => (
           <S.Item key={`carousel-item-${item.name}`}>
-            <Profile {...item} editable={editable} />
+            <Profile
+              {...item}
+              editable={editable}
+              onClickDelete={onClickDelete}
+              onClickEdit={onClickEdit}
+            />
           </S.Item>
         ))}
       </S.Carousel>

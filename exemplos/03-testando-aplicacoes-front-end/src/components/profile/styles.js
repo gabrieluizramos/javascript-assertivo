@@ -1,29 +1,29 @@
 import styled, { css } from 'styled-components';
 
 export const Profile = styled.div`
-  width: 300px;
-  letter-spacing: 0.8px;
-`;
-
-export const Figure = styled.figure`
   ${({ theme }) => css`
-    width: 100%;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${theme.colors.white};
-    background: ${theme.colors.post.color};
+    width: 300px;
+    letter-spacing: 0.8px;
 
-    & > * {
+    & > figure {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-    }
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: ${theme.colors.white};
+      background: ${theme.colors.post.color};
 
-    svg {
-      max-width: 100px;
+      & > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      svg {
+        max-width: 100px;
+      }
     }
   `}
 `;

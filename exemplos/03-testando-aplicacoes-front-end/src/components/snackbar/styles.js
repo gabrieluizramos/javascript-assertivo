@@ -39,7 +39,7 @@ export const Snackbar = styled.div`
     max-width: 95%;
     margin: 0 auto;
     position: absolute;
-    bottom: 10px;
+    bottom: ${theme.spacing.quadruple};
     left: 0;
     right: 0;
     transition: ${theme.transition.default};
