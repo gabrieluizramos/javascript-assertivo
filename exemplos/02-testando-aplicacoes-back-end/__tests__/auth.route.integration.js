@@ -47,7 +47,7 @@ describe('/auth/login', () => {
       const [cookie] = request.headers['set-cookie'];
 
       expect(request.status).toEqual(200);
-      expect(request.data).toEqual({ uid: admin.uid });
+      expect(admin).toEqual(expect.objectContaining(request.data));
       expect(cookie).toEqual(expect.stringContaining(admin.uid));
     });
   });

@@ -9,7 +9,10 @@ export const error = (err, req, res, next) => {
 }
 
 export default [
-  cors(),
+  cors({
+    origin: ['http://localhost:8081'],
+    credentials: true,
+  }),
   bodyParser.json(),
   cookieParser(),
 ]

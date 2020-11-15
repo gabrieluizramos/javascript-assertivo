@@ -20,10 +20,12 @@ it('Encontra o usuário e insere seu UID em cookie', async () => {
   const req = createReq({ body: createAuth() });
   const res = createRes();
 
-  const uid = 'qualquer-uid-de-usuario';
-  findUser.usernameAndPassword.mockResolvedValueOnce({
-    uid
-  });
+  const campos = {
+    uid: 'qualquer-uid',
+    userName: 'username',
+    password: 'password'
+  };
+  findUser.usernameAndPassword.mockResolvedValueOnce(campos);
 
   await authenticate(req, res);
 
@@ -31,14 +33,14 @@ it('Encontra o usuário e insere seu UID em cookie', async () => {
   expect(findUser.usernameAndPassword).toHaveBeenCalledWith(req.body.username, req.body.password);
 
   expect(res.cookie).toHaveBeenCalledTimes(1);
-  expect(res.cookie).toHaveBeenCalledWith('uid', uid);
+  expect(res.cookie).toHaveBeenCalledWith('uid', campos.uid);
   // poderia ter sido validado da seguinte forma
   // expect(res.cookie.mock.calls).toEqual([
   //   ['uid', uid]
   // ]);
 
   expect(res.json).toHaveBeenCalledTimes(1);
-  expect(res.json).toHaveBeenCalledWith({ uid });
+  expect(res.json).toHaveBeenCalledWith({ userName: campos.userName });
   // poderia ter sido validado da seguinte forma
   // expect(res.json.mock.calls).toEqual([
   //   [{ uid }]
