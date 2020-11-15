@@ -5,7 +5,7 @@ import findUser from '../services/user/find.js'
 
 export const authenticate = async (req, res) => {
   try {
-    const { uid, password, ...data } = await findUser.usernameAndPassword(req.body.username, req.body.password);
+    const { uid, ...data } = await findUser.usernameAndPassword(req.body.username, req.body.password);
     res.cookie('uid', uid);
 
     return res.json({ ...data, uid });

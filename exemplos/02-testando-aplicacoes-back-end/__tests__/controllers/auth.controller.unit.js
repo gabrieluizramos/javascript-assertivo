@@ -40,7 +40,7 @@ it('Encontra o usuário e insere seu UID em cookie', async () => {
   // ]);
 
   expect(res.json).toHaveBeenCalledTimes(1);
-  expect(res.json).toHaveBeenCalledWith({ userName: campos.userName });
+  expect(res.json).toHaveBeenCalledWith(campos);
   // poderia ter sido validado da seguinte forma
   // expect(res.json.mock.calls).toEqual([
   //   [{ uid }]
