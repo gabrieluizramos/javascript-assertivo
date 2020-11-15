@@ -27,4 +27,13 @@ export default createGlobalStyle`
     z-index: 0;
     outline: none;
   }
+
+  #root {
+    ${({ theme }) => css`
+      width: 1500px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: ${theme.spacing.default};
+    `}
+  }
 `;
