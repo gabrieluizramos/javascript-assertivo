@@ -1,4 +1,4 @@
-export const createSchema = ({ email, userName: username, password, name, lastName, role } = {}) => ({
+export const createSchema = ({ email, userName: username, password, name, lastName, role, avatar } = {}) => ({
   fields: [
     {
       type: 'text',
@@ -43,6 +43,14 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
       validations: 'isRequired',
       inputProps: {
         defaultValue: lastName,
+      }
+    },
+    {
+      type: 'text',
+      name: 'avatar',
+      placeholder: 'http://site.com.br/imagem-de-perfil.jpg',
+      inputProps: {
+        defaultValue: avatar,
       }
     },
     {
