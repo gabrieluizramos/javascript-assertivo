@@ -15,7 +15,7 @@ export const NOTIFICATION_TYPES = {
 
 export const MESSAGES = {
   DELETE: {
-    SUCCESS: 'Usuário removido com sucesso!',
+    SUCCESS: 'Usuário removido com sucesso',
     ERROR: 'Ocorreu um erro ao remover usuário'
   },
   AUTHENTICATE: {
@@ -25,5 +25,9 @@ export const MESSAGES = {
   UPDATE: {
     SUCCESS: 'Perfil atualizado com sucesso',
     ERROR: 'Ocorreu um erro ao atualizar perfil',
+  },
+  CREATE: {
+    SUCCESS: 'Perfil criado com sucesso',
+    ERROR: 'Ocorreu um erro ao criar o perfil',
   }
 };

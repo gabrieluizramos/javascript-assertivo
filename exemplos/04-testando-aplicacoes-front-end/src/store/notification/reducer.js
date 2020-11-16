@@ -3,7 +3,9 @@ import {
   DELETE_PROFILE_ERROR,
   LOAD_PROFILES_ERROR,
   UPDATE_USER_PROFILE_SUCCESS,
-  UPDATE_USER_PROFILE_ERROR
+  UPDATE_USER_PROFILE_ERROR,
+  CREATE_USER_PROFILE_SUCCESS,
+  CREATE_USER_PROFILE_ERROR
 } from '../profiles/actions';
 import {
   AUTHENTICATE_ERROR
@@ -30,6 +32,7 @@ const reducer = (state = INITIAL_STATE, action) => {
     case LOAD_PROFILES_ERROR:
     case AUTHENTICATE_ERROR:
     case UPDATE_USER_PROFILE_ERROR:
+    case CREATE_USER_PROFILE_ERROR:
       return {
         ...state,
         active: true,
@@ -42,6 +45,13 @@ const reducer = (state = INITIAL_STATE, action) => {
         active: true,
         type: NOTIFICATION_TYPES.SUCCESS,
         message: MESSAGES.DELETE.SUCCESS
+      };
+
+    case CREATE_USER_PROFILE_SUCCESS:
+      return {
+        active: true,
+        type: NOTIFICATION_TYPES.SUCCESS,
+        message: MESSAGES.CREATE.SUCCESS
       };
 
     case UPDATE_USER_PROFILE_SUCCESS:

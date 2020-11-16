@@ -9,13 +9,6 @@ export const Logout = styled.div`
     right: ${theme.spacing.onehalf};
     top: ${theme.spacing.onehalf};
 
-    & > figure {
-      width: ${theme.spacing.double};
-      height: ${theme.spacing.double};
-      border-radius: ${theme.radius.rounded};
-      overflow: hidden;
-    }
-
     & > *:not(:last-child) {
       margin-right: ${theme.spacing.default};
     }
@@ -48,6 +41,7 @@ const editor = {
 
 export const Editor = styled.div`
   ${({ theme, active }) => css`
+    z-index: 1;
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
@@ -94,5 +88,13 @@ export const Form = styled.div`
       display: flex;
       flex-direction: column;
     }
+  `}
+`;
+
+export const AddButton = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    right: ${theme.spacing.onehalf};
+    bottom: ${theme.spacing.onehalf};
   `}
 `;

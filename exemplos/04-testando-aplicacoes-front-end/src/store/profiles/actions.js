@@ -16,6 +16,12 @@ export const UPDATE_USER_PROFILE_PENDING = 'UPDATE_USER_PROFILE_PENDING';
 export const UPDATE_USER_PROFILE_SUCCESS = 'UPDATE_USER_PROFILE_SUCCESS';
 export const UPDATE_USER_PROFILE_ERROR = 'UPDATE_USER_PROFILE_ERROR';
 
+export const CREATING_USER_PROFILE = 'CREATING_USER_PROFILE';
+export const CREATING_USER_PROFILE_CANCEL = 'CREATING_USER_PROFILE_CANCEL';
+export const CREATE_USER_PROFILE_PENDING = 'CREATE_USER_PROFILE_PENDING';
+export const CREATE_USER_PROFILE_SUCCESS = 'CREATE_USER_PROFILE_SUCCESS';
+export const CREATE_USER_PROFILE_ERROR = 'CREATE_USER_PROFILE_ERROR';
+
 // Creators
 export const loadProfilesPending = () => ({
   type: LOAD_PROFILES_PENDING
@@ -57,6 +63,24 @@ export const updateUserProfileError = () => ({
   type: UPDATE_USER_PROFILE_ERROR
 });
 
+export const creatingUserProfile = uid => ({
+  type: CREATING_USER_PROFILE,
+  payload: uid
+});
+export const creatingUserProfileCancel = () => ({
+  type: CREATING_USER_PROFILE_CANCEL,
+});
+export const createUserProfilePending = () => ({
+  type: CREATE_USER_PROFILE_PENDING
+});
+export const createUserProfileSuccess = (payload) => ({
+  type: CREATE_USER_PROFILE_SUCCESS,
+  payload,
+});
+export const createUserProfileError = () => ({
+  type: CREATE_USER_PROFILE_ERROR
+});
+
 // Fetching constants
 export const LOADING_STATUS = {
   LOADING: 'LOADING',
@@ -96,5 +120,16 @@ export const updateUserProfile = (information) => async (dispatch, getState) => 
     dispatch(updateUserProfileSuccess({ uid, information }));
   } catch (err) {
     dispatch(updateUserProfileError(err));
+  }
+};
+
+export const createUserProfile = (information) => async (dispatch) => {
+  dispatch(createUserProfilePending());
+
+  try {
+    const profile = await client.createProfile({ information });
+    dispatch(createUserProfileSuccess(profile));
+  } catch (err) {
+    dispatch(createUserProfileError(err));
   }
 };

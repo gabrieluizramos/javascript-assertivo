@@ -1,4 +1,4 @@
-export const createSchema = ({ email, userName: username, password, name, lastName } = {}) => ({
+export const createSchema = ({ email, userName: username, password, name, lastName, role } = {}) => ({
   fields: [
     {
       type: 'text',
@@ -11,7 +11,7 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
     },
     {
       type: 'text',
-      name: 'username',
+      name: 'userName',
       placeholder: 'usuario',
       validations: 'isRequired',
       inputProps: {
@@ -44,9 +44,21 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
       inputProps: {
         defaultValue: lastName,
       }
+    },
+    {
+      type: 'select',
+      name: 'role',
+      validations: 'isRequired',
+      inputProps: {
+        options: [
+          { text: 'Usuário', value: 'USER' },
+          { text: 'Administrador', value: 'ADMIN' },
+        ],
+        defaultValue: role
+      }
     }
   ],
-  submit: 'Atualizar',
+  submit: 'Confirmar',
   buttonProps: {
     type: 'green'
   }
