@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Parte 4
+## Testando aplicações Front-end
+Terceiro projeto a ser testado ao longo do livro.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto é uma camada de Front-end que integra com a API desenvolvida na [parte 3](../03-testando-aplicacoes-back-end)
 
-## Available Scripts
+## Para quem está lendo o livro
+Ao clonar esse repositório enquanto acompanha o livro, não esqueça de apagar a pasta `__tests__` para que você possa realizar os exemplos acompanhando o conteúdo.
 
-In the project directory, you can run:
+## Estrutura do projeto
+Esse projeto foi iniciado utilizando [create-react-app](https://create-react-app.dev/) pra que o foco ficasse justamente na aplicação e nos seus testes e o mínimo de tempo possível fosse dedicado às configurações de build.
 
-### `npm start`
+Para que pudéssemos testar a maior quantidade de cenários de aplicações possíveis, foi utilizado [React](https://pt-br.reactjs.org/) para a construção dos seus componentes, [Redux](https://redux.js.org/)/[React-Redux](https://react-redux.js.org/) para gerenciamento de estado e [Styled Components](https://styled-components.com/) como solução de estilo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dentro da pasta `src` encontra-se o código fonte da aplicação, divido da seguinte maneira:
+- `clients`: clientes intermediários que ligam os componentes às APIs externas como:
+  - `http`: para realização de requisições HTTP`;
+  - `timer`: para utilização de utilitários como `setTimeout`;
+  - `storage`: para manipulação de dados de cookie/localStorage.
+- `components`: componentes mais básicos da aplicação que servem somente de interação de usuário e não manipulam nenhum estado global. Cada componente está em uma pasta separada, que contém:
+  - `index.js`: arquivo do componente em si;
+  - `styles.js`: arquivo com os estilos do componente;
+  - `stories.js`: arquivo de configuração do storybook do componente.
+- `hooks`: alguns hooks do React reutilizáveis;
+- `mocks`: alguns dados para utilização nos arquivos;
+- `pages`: componentes principais das páginas (`login` e `dashboard`), que montam as telas da aplicação utilizando os componentes da pasta `components` e também utilizam dados de estado definidos globalmente;
+- `providers`: os provedores de informação (e Providers React) da aplicação, dividos em:
+  - `notification`: provê a configuração para a utilização das notificações de sucesso/erro;
+  - `redux`: provê a configuração para a utilização do Redux como gerenciamento global de estado;
+  - `routes`: provê as configurações para utilização de rotas públicas e privadas;
+  - `theme`: provê o tema da aplicação para reuso dos componentes.
+- `store`: arquivos relacionados ao estado global da aplicação, contém as configurações principais nos arquivos `index.js`, as configurações de middlewares em `middlewares.js` e a composição dos em `reducers.js`. Também possui as subpastas, cada uma com suas respectivas `actions`, `reducers` e `selectors` sendo:
+  - `notification`: relacionada à notificações de sucesso/erro;
+  - `profiles`: relacionada aos dados de perfis de usuários;
+  - `user`: relacionada aos dados do usuário de autenticado.
+- `styles`: possui os estilos globais da aplicação no arquivo `reset.js` e o tema no arquivo `theme.js`;
+- `app.js`: inicia as aplicações com todos os Providers;
+- `index.js`: instancia a aplicação utilizando ReactDOM.

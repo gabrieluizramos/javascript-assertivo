@@ -1,4 +1,6 @@
-# CLI
+# Parte 2
+## Aplicando testes unitários em uma CLI
+
 Essa CLI foi desenvolvida com o objetivo de elucidar os exemplos de testes do Livro. A aplicação, basicamente, permite cadastro, remoção, atualização e leitura de usuários.
 
 ## Para quem está lendo o livro

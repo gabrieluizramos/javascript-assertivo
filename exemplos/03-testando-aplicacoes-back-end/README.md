@@ -1,7 +1,8 @@
-# Back-end API
+# Parte 3
+## Testando aplicações Back-end
 Segundo projeto a ser testado ao longo do livro.
 
-Esse projeto utiliza [Node](https://nodejs.org/) e [Express](https://expressjs.com/) para a criação de uma API, que consome e aplica as funcionalidades da CLI que testamos anteriormente.
+Esse projeto utiliza [Node](https://nodejs.org/) e [Express](https://expressjs.com/) para a criação de uma API, que consome e aplica as funcionalidades da CLI criada na [parte 2](../02-aplicando-testes-unitarios-em-uma-cli).
 
 ## Para quem está lendo o livro
 Ao clonar esse repositório enquanto acompanha o livro, não esqueça de apagar a pasta `__tests__` para que você possa realizar os exemplos acompanhando o conteúdo.
