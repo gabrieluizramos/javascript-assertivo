@@ -21,5 +21,9 @@ export const MESSAGES = {
   AUTHENTICATE: {
     SUCCESS: 'Autenticado com sucesso',
     ERROR: 'Ocorreu um erro ao autenticar'
+  },
+  UPDATE: {
+    SUCCESS: 'Perfil atualizado com sucesso',
+    ERROR: 'Ocorreu um erro ao atualizar perfil',
   }
 };

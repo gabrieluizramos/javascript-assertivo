@@ -1,6 +1,6 @@
 import baseClient from './config';
 
-import { setUserData } from '../user';
+import { setData } from '../storage';
 
 export const logIn = async ({
   client = baseClient,
@@ -8,7 +8,7 @@ export const logIn = async ({
   password
 }) => {
   const user = await client.post('/auth/login', { username, password });
-  setUserData(user);
+  setData(user);
 
   return user;
 }

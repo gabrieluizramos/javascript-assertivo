@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Button from '../button';
@@ -8,7 +8,8 @@ import validators from './validators';
 const Form = ({
   schema,
   onSubmit: submit,
-  disabled
+  disabled,
+  validate
 }) => {
   const fieldsWithValidations = schema.fields.filter(field =>  field.validations && field.validations.length);
   const [fields, setFields] = useState(
@@ -51,7 +52,8 @@ const Form = ({
 
   const allFieldsAreValid = () => {
     validateAllFields();
-    return !Object.keys(fields).find(key => !fields[key] || typeof fields[key] === 'string');
+    const valid = !Object.keys(fields).find(key => !fields[key] || typeof fields[key] === 'string');
+    return valid;
   };
 
   const onSubmit = e => {
@@ -60,6 +62,12 @@ const Form = ({
 
     submit(getFormValues());
   };
+
+  useEffect(() => {
+    if (validate) {
+      validateAllFields()
+    }
+  }, []);
 
   return (
     <form method="POST" onSubmit={onSubmit} ref={formRef} className="form">

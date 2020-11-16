@@ -1,6 +1,5 @@
 import { logIn } from '../../clients/http';
-import { eraseUserData } from '../../clients/user';
-import { isLoggedIn, getUserData } from '../../clients/user';
+import { clearData, hasData, getData } from '../../clients/storage';
 
 // Actions ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // Type
@@ -39,15 +38,15 @@ export const login = (username, password) => async (dispatch) => {
 };
 
 export const logout = () => async (dispatch) => {
-  eraseUserData();
+  clearData();
   dispatch(clearAuthentication());
 };
 
 export const checkAuthentication = () => dispatch => {
   dispatch({ type: CHECK_AUTHENTICATION });
 
-  if (isLoggedIn()) {
-    const user = getUserData();
+  if (hasData()) {
+    const user = getData();
     dispatch(authenticateSuccess(user))
   }
 };
