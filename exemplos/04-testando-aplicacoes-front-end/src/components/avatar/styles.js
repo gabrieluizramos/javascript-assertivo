@@ -5,6 +5,10 @@ const minimalAvatar = theme => css`
   height: ${theme.spacing.double};
   border-radius: ${theme.radius.rounded};
   overflow: hidden;
+
+  svg {
+    width: ${theme.spacing.default};
+  }
 `;
 
 export const Figure = styled.figure`

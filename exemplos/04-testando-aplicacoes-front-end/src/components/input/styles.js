@@ -40,3 +40,11 @@ export const Input = styled.input`
     padding: ${theme.spacing.default};
   `}
 `;
+
+export const Select = styled.select`
+  ${({ theme }) => css`
+    width: 100%;
+    background: transparent;
+    padding: ${theme.spacing.default};
+  `}
+`;

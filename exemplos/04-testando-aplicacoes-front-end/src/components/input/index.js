@@ -19,6 +19,7 @@ Input.propTypes = {
   type: PropTypes.oneOf([
     'text',
     'password',
+    'select',
   ])
 };
 
