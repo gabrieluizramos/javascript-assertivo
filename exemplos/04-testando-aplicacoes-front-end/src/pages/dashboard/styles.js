@@ -42,7 +42,7 @@ const editor = {
 export const Editor = styled.div`
   ${({ theme, active }) => css`
     z-index: 1;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
     position: fixed;
@@ -55,9 +55,9 @@ export const Editor = styled.div`
     ${active && editor.active(theme)};
 
     @media (max-width: 800px) {
-      width: 100vw;
       height: 100vh;
       overflow: auto;
+      max-width: initial;
     }
 
     & > div {
