@@ -6,7 +6,7 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
       placeholder: 'email',
       validations: 'isEmail',
       inputProps: {
-        defaultValue: email && email.toLowerCase(),
+        defaultValue: email,
       }
     },
     {

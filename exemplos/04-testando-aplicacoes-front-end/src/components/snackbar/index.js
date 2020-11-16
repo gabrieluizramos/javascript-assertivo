@@ -1,4 +1,4 @@
-import React, { setState } from 'react';
+import React from 'react';
 import { createPortal } from 'react-dom';
 
 import { Close } from '@styled-icons/ionicons-outline/Close';
