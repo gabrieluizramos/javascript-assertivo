@@ -6,9 +6,9 @@ const Text = ({ options = [], ...props }) => {
   return (
     <S.Fieldset>
       <S.Select {...props}>
-        {options.map(option => (
-          <option value={option.value}>
-            {option.text}
+        {options.map(({ text, value }) => (
+          <option key={`option-${text}`} value={value}>
+            {text}
           </option>
         ))}
       </S.Select>
