@@ -24,9 +24,10 @@ export const Fieldset = styled.fieldset`
   `}
 `;
 
-export const Icon = styled.span`
+export const Icon = styled.button`
   ${({ theme }) => css`
     padding: 0 ${theme.spacing.half};
+    background: transparent;
     width: 35px;
     cursor: pointer;
     color: ${theme.colors.post.color};
