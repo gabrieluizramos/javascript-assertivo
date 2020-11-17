@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Renderiza um botão corretamente 1`] = `
+<button
+  class="sc-bdfBwQ iOlsKH"
+  type=""
+>
+  <span>
+    conteudo
+  </span>
+</button>
+`;
