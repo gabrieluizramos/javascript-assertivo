@@ -9,7 +9,7 @@ import { useDisplayDelay } from '../../hooks';
 
 import * as S from './styles';
 
-const root = document.getElementById('root');
+const root = document.body;
 const Snackbar = ({ children, type, onExit }) => {
   const { display, visible, remove } = useDisplayDelay({ onUnmount: onExit });
 
