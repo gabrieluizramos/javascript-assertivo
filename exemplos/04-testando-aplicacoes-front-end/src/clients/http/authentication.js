@@ -1,5 +1,6 @@
 import baseClient from './config';
 
+import endpoints from './endpoints';
 import { setData } from '../storage';
 
 export const logIn = async ({
@@ -7,7 +8,7 @@ export const logIn = async ({
   username,
   password
 }) => {
-  const user = await client.post('/auth/login', { username, password });
+  const user = await client.post(endpoints.authentication, { username, password });
   setData(user);
 
   return user;
