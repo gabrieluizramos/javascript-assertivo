@@ -15,7 +15,6 @@ Para que pudéssemos testar a maior quantidade de cenários de aplicações poss
 Dentro da pasta `src` encontra-se o código fonte da aplicação, divido da seguinte maneira:
 - `clients`: clientes intermediários que ligam os componentes às APIs externas como:
   - `http`: para realização de requisições HTTP`;
-  - `timer`: para utilização de utilitários como `setTimeout`;
   - `storage`: para manipulação de dados de cookie/localStorage.
 - `components`: componentes mais básicos da aplicação que servem somente de interação de usuário e não manipulam nenhum estado global. Cada componente está em uma pasta separada, que contém:
   - `index.js`: arquivo do componente em si;

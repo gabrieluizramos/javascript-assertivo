@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import { setTimeout } from '../clients/timer';
-
 const DEFAULT_DELAY_MS = 500;
 const DEFAULT_TIMEOUT_MS = 5000;
 
@@ -33,7 +31,7 @@ export const useDisplayDelay = ({
   }
 
   const deactivate = () => {
-    setActive(false)
+    setActive(false);
     remove();
   };
 
@@ -44,7 +42,7 @@ export const useDisplayDelay = ({
 
     setTimeout(() => {
       deactivate();
-    }, timeout);
+    }, timeout + delay);
   }, []);
 
   return {
