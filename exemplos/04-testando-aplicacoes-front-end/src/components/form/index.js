@@ -10,6 +10,7 @@ const Form = ({
   onSubmit: submit,
   disabled
 }) => {
+  const formRef = useRef(null);
   const fieldsWithValidations = schema.fields.filter(field =>  field.validations && field.validations.length);
   const fieldsWithoutValidations = schema.fields.filter(field => !field.validations);
   const hasFieldsWithoutValidations = fieldsWithoutValidations.length > 0;
@@ -18,7 +19,7 @@ const Form = ({
     fieldsWithValidations.reduce((validations, field, index) => ({...validations, [field.name]: !!schema.fields[index]?.inputProps?.defaultValue || false }), {})
   );
 
-  const getFieldValue = field => formRef.current[field].value;
+  const getFieldValue = field => formRef.current[field]?.value;
 
   const getFormValues = () => {
    const validated = Object.keys(fields).reduce((acc, cur) => ({
@@ -41,6 +42,7 @@ const Form = ({
 
   const onChangeField = (name, type) => value => {
     const validation = validators(type)(value);
+    window.form = formRef;
 
     if (validation.hasError) {
       setFields(prevFields => ({
@@ -59,8 +61,6 @@ const Form = ({
     ...validations,
     [field.name]: onChangeField(field.name, field.validations)
   }), {});
-
-  const formRef = useRef(null);
 
   const validateAllFields = () => Object.keys(validations).forEach(field => {
     validations[field](getFieldValue(field))

@@ -2,7 +2,7 @@ export default {
   fields: [
     {
       type: 'text',
-      name: 'FNAME',
+      name: 'name',
       label: 'Nome',
       placeholder: 'Seu nome',
       validations: 'isRequired'

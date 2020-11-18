@@ -18,6 +18,7 @@ const Input = ({ type, error, ...props }) => {
 Input.propTypes = {
   type: PropTypes.oneOf([
     'text',
+    'email',
     'password',
     'select',
   ])
