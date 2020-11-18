@@ -2,7 +2,7 @@
 
 exports[`<Avatar /> Deve renderizar um ícone ao não possuir uma imagem 1`] = `
 <figure
-  class="sc-bdfBwQ WCBqw"
+  class="sc-hKgILt fZnRJR"
 >
   <svg
     aria-hidden="true"
@@ -21,7 +21,7 @@ exports[`<Avatar /> Deve renderizar um ícone ao não possuir uma imagem 1`] = `
 
 exports[`<Avatar /> Deve renderizar uma imagem quando disponível 1`] = `
 <figure
-  class="sc-bdfBwQ WCBqw"
+  class="sc-hKgILt fZnRJR"
 >
   <img
     alt="avatar"
