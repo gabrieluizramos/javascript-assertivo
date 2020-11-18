@@ -1,5 +1,4 @@
-import { logIn } from '../../clients/http';
-import { clearData, hasData, getData } from '../../clients/storage';
+import * as auth from '../../clients/http/authentication';
 
 // Actions ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // Type
@@ -30,7 +29,7 @@ export const login = (username, password) => async (dispatch) => {
   dispatch(authenticating());
 
   try {
-    const user = await logIn({username, password});
+    const user = await auth.logIn({username, password});
     dispatch(authenticateSuccess(user));
   } catch (error) {
     dispatch(authenticateError(error));
@@ -38,15 +37,15 @@ export const login = (username, password) => async (dispatch) => {
 };
 
 export const logout = () => async (dispatch) => {
-  clearData();
+  auth.logOut();
   dispatch(clearAuthentication());
 };
 
 export const checkAuthentication = () => dispatch => {
   dispatch({ type: CHECK_AUTHENTICATION });
 
-  if (hasData()) {
-    const user = getData();
+  if (auth.isLoggedIn()) {
+    const user = auth.getLoggedUser();
     dispatch(authenticateSuccess(user))
   }
 };

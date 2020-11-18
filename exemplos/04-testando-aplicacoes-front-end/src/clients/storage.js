@@ -7,9 +7,9 @@ export const hasData = () => !!getData();
 const clearCookie = () => {
   const past = new Date(0, 0, 0)
   document.cookie = `uid=; expires=${past}`
-}
+};
 
 export const clearData = () => {
   setData('');
   clearCookie();
-}
+};
