@@ -1,15 +1,19 @@
 const STORAGE_KEY = 'user';
 
-export const getData = () => JSON.parse(localStorage.getItem(STORAGE_KEY));
-export const setData = data => localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+export const getData = ({ client = localStorage } = {}) => JSON.parse(client.getItem(STORAGE_KEY));
+export const setData = ({ client = localStorage, data } = {}) => client.setItem(STORAGE_KEY, JSON.stringify(data));
+export const removeData = ({ client = localStorage } = {}) => client.removeItem(STORAGE_KEY);
 export const hasData = () => !!getData();
 
-const clearCookie = () => {
+export const clearCookie = ({ client }) => {
   const past = new Date(0, 0, 0)
-  document.cookie = `uid=; expires=${past}`
+  const expireString = `uid=; expires=${past}`;
+  client.cookie = expireString;
+
+  return expireString;
 };
 
-export const clearData = () => {
-  setData('');
-  clearCookie();
+export const erase = () => {
+  clearCookie({ client: document });
+  removeData();
 };
