@@ -26,12 +26,12 @@ Dentro da pasta `src` encontra-se o código fonte da aplicação, divido da segu
 - `providers`: os provedores de informação (e Providers React) da aplicação, dividos em:
   - `notification`: provê a configuração para a utilização das notificações de sucesso/erro;
   - `redux`: provê a configuração para a utilização do Redux como gerenciamento global de estado;
-  - `routes`: provê as configurações para utilização de rotas públicas e privadas;
   - `theme`: provê o tema da aplicação para reuso dos componentes.
+- `routes`: configurações para utilização das rotas públicas e privadas;
 - `store`: arquivos relacionados ao estado global da aplicação, contém as configurações principais nos arquivos `index.js`, as configurações de middlewares em `middlewares.js` e a composição dos em `reducers.js`. Também possui as subpastas, cada uma com suas respectivas `actions`, `reducers` e `selectors` sendo:
   - `notification`: relacionada à notificações de sucesso/erro;
   - `profiles`: relacionada aos dados de perfis de usuários;
   - `user`: relacionada aos dados do usuário de autenticado.
 - `styles`: possui os estilos globais da aplicação no arquivo `reset.js` e o tema no arquivo `theme.js`;
-- `app.js`: inicia as aplicações com todos os Providers;
+- `app.js`: inicia as aplicações com todos os Providers, rotas e aplica o Reset de estilos;
 - `index.js`: instancia a aplicação utilizando ReactDOM.

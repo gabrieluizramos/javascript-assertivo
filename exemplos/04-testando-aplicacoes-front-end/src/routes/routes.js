@@ -1,5 +1,5 @@
-import Login from '../../pages/login';
-import Dashboard from '../../pages/dashboard';
+import Login from '../pages/login';
+import Dashboard from '../pages/dashboard';
 
 export const home = '/';
 

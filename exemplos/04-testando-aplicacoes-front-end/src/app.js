@@ -1,4 +1,14 @@
-import Providers from './providers';
+import React from 'react';
 
-const App = () => <Providers />
+import Providers from './providers';
+import Routes from './routes';
+import Reset from './styles/reset';
+
+const App = () => (
+  <Providers>
+    <Reset />
+    <Routes />
+  </Providers>
+);
+
 export default App;
