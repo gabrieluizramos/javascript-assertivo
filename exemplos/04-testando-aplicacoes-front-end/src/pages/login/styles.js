@@ -30,7 +30,7 @@ export const Form = styled.div`
       display: flex;
       flex-direction: column;
 
-      button {
+      & > button {
         padding: ${theme.spacing.default};
       }
     }

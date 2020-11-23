@@ -92,7 +92,7 @@ const DashboardPage = () => {
           <LogoutIcon />
         </Button>
       </S.Logout>
-      <S.Editor active={isFormOpen}>
+      <S.Editor active={isFormOpen} role="dialog">
         <Card spacing="double">
           <S.CloseButton>
             <Button onClick={onCloseEditing} round>
