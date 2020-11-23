@@ -1,7 +1,5 @@
 import * as storage from '../../clients/storage';
 
-
-
 describe('Cliente de Armazenamento', () => {
   const client = {
     getItem: jest.fn(),

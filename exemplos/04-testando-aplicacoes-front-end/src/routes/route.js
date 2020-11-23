@@ -1,16 +1,16 @@
 import { Route as BaseRoute, Redirect } from 'react-router-dom';
 import { useAuthentication } from '../store/user/selectors';
 
-import { home } from './routes';
+import { paths } from './routes';
 
 export const PrivateRoute = ({ children, ...props }) => {
   const { authenticated } = useAuthentication();
-  const redirect = <Redirect to={{ pathname: home }} />
+  const render = () => authenticated ? children : <Redirect to={{ pathname: paths.home }} />
 
   return (
     <BaseRoute
       {...props}
-      render={() => authenticated ? children : redirect}
+      render={render}
     />
   );
 };
