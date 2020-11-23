@@ -29,5 +29,8 @@ export const MESSAGES = {
   CREATE: {
     SUCCESS: 'Perfil criado com sucesso',
     ERROR: 'Ocorreu um erro ao criar o perfil',
+  },
+  DEFAULT: {
+    ERROR: 'Ocorreu um erro ao realizar operação'
   }
 };

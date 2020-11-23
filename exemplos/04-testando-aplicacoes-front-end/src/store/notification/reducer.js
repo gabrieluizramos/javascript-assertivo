@@ -17,7 +17,7 @@ import {
   MESSAGES
 } from './actions';
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   active: false,
   type: '',
   message: ''
@@ -26,6 +26,7 @@ const INITIAL_STATE = {
 const reducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
   const [prefix] = type.split('_');
+  const defaultMessage = MESSAGES[prefix] ? MESSAGES[prefix].ERROR : MESSAGES.DEFAULT.ERROR;
 
   switch(type) {
     case DELETE_PROFILE_ERROR:
@@ -37,7 +38,7 @@ const reducer = (state = INITIAL_STATE, action) => {
         ...state,
         active: true,
         type: NOTIFICATION_TYPES.ERROR,
-        message: payload || MESSAGES[prefix].ERROR
+        message: payload || defaultMessage
       };
 
     case DELETE_PROFILE_SUCCESS:

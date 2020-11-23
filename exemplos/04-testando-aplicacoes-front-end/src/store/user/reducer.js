@@ -1,7 +1,7 @@
-import { AUTHENTICATE_PENDING, AUTHENTICATE_ERROR, AUTHENTICATE_SUCCESS, LOGOUT , LOADING_STATUS } from './actions';
+import { AUTHENTICATE_PENDING, AUTHENTICATE_SUCCESS, LOGOUT, LOADING_STATUS } from './actions';
 
 // State ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   status: null,
   authenticated: false,
   admin: false,

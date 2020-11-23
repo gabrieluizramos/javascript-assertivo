@@ -18,7 +18,7 @@ import {
 
 
 // State ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   status: null,
   profiles: [],
   editing: {},
@@ -30,12 +30,6 @@ const reducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
 
   switch(type) {
-    case LOAD_PROFILES_PENDING:
-      return {
-        ...state,
-        status: LOADING_STATUS.LOADING
-      }
-
     case LOAD_PROFILES_SUCCESS: {
       return {
         ...state,
@@ -44,17 +38,9 @@ const reducer = (state = INITIAL_STATE, action) => {
       }
     }
 
-    case DELETE_PROFILE_PENDING: {
-      return {
-        ...state,
-        status: LOADING_STATUS.LOADING,
-      }
-    }
-
     case DELETE_PROFILE_SUCCESS: {
       return {
         ...state,
-        status: LOADING_STATUS.LOADED,
         profiles: state.profiles.filter(user => user.uid !== payload)
       }
     }
