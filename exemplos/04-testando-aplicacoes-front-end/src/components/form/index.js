@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Button from '../button';
@@ -10,47 +10,29 @@ const Form = ({
   onSubmit: submit,
   disabled
 }) => {
-  const formRef = useRef(null);
   const fieldsWithValidations = schema.fields.filter(field =>  field.validations && field.validations.length);
-  const fieldsWithoutValidations = schema.fields.filter(field => !field.validations);
-  const hasFieldsWithoutValidations = fieldsWithoutValidations.length > 0;
-
-  const [fields, setFields] = useState(
+  const [values, setValues] = useState(schema.fields.reduce((fields, field, index) => ({ ...fields, [field.name]: schema.fields[index].inputProps?.defaultValue || '' }), {}));
+  const [fieldsError, setFieldsError] = useState(
     fieldsWithValidations.reduce((validations, field, index) => ({...validations, [field.name]: !!schema.fields[index]?.inputProps?.defaultValue || false }), {})
   );
 
-  const getFieldValue = field => formRef.current[field]?.value;
-
-  const getFormValues = () => {
-   const validated = Object.keys(fields).reduce((acc, cur) => ({
-      ...acc,
-      [cur]: getFieldValue(cur)
-    }), {});
-
-    const unvalidated = hasFieldsWithoutValidations
-      ? fieldsWithoutValidations.reduce((acc, cur) => ({
-        ...acc,
-        [cur.name]: getFieldValue(cur.name)
-      }), {})
-      : {};
-
-    return {
-      ...validated,
-      ...unvalidated,
-    }
-  }
+  const getFieldValue = field => values[field];
 
   const onChangeField = (name, type) => value => {
     const validation = validators(type)(value);
-    window.form = formRef;
+
+    setValues({
+      ...values,
+      [name]: value
+    });
 
     if (validation.hasError) {
-      setFields(prevFields => ({
+      setFieldsError(prevFields => ({
         ...prevFields,
         [name]: validation.message
       }));
     } else {
-      setFields(prevFields => ({
+      setFieldsError(prevFields => ({
         ...prevFields,
         [name]: true
       }));
@@ -68,7 +50,7 @@ const Form = ({
 
   const allFieldsAreValid = () => {
     validateAllFields();
-    const valid = !Object.keys(fields).find(key => !fields[key] || typeof fields[key] === 'string');
+    const valid = !Object.keys(fieldsError).find(key => !fieldsError[key] || typeof fieldsError[key] === 'string');
     return valid;
   };
 
@@ -76,30 +58,35 @@ const Form = ({
     e.preventDefault();
     if(!allFieldsAreValid() || disabled) return;
 
-    submit(getFormValues());
+    submit(values);
   };
 
   return (
-    <form method="POST" onSubmit={onSubmit} ref={formRef} className="form">
+    <form method="POST" onSubmit={onSubmit} className="form">
       {
-        schema.fields.map(({ type, name, label, placeholder, mask, inputProps }, index) => {
-          const props = {type, name, id: name , placeholder, label, mask };
+        schema.fields.map(({ type, name, label, placeholder, mask, inputProps = {} }, index) => {
+          const { defaultValue, ...passedProps } = inputProps;
+          const props = { type, name, id: name , placeholder, label, mask, ...passedProps };
 
           if (validations[name]) {
-            props.onChange = props.onBlur = (e) => validations[name](e.target.value);
+            props.onChange = props.onBlur = ({ target: { value } }) => validations[name](value);
+          } else {
+            props.onChange = ({ target }) => setValues({ ...values, [target.name]: target.value });
           }
 
           return (
             <Input
               {...props}
-              {...inputProps}
-              error={fields[name]}
+              error={fieldsError[name]}
+              value={values[name]}
               key={`input-field-${index}-${name}-${type}`}
             />
           )
         })
       }
-      <Button disabled={disabled} {...schema.buttonProps} >{schema.submit}</Button>
+      <Button disabled={disabled} {...schema.buttonProps}>
+        {schema.submit}
+      </Button>
     </form>
   );
 }

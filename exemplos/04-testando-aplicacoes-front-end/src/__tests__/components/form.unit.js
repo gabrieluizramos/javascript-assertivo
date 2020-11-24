@@ -54,5 +54,9 @@ describe('<Form />', () => {
 
     // agora submit deve ter sido chamado
     expect(onSubmit).toHaveBeenCalledTimes(1);
+    expect(onSubmit).toHaveBeenCalledWith({
+      name: profile.name,
+      email: profile.email
+    });
   });
 });

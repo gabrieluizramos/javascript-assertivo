@@ -17,7 +17,7 @@ const Password = ({ ...props }) => {
   return (
     <S.Fieldset>
       <S.Input type={type} {...props} />
-      <S.Icon onClick={toggleVisibility}>
+      <S.Icon onClick={toggleVisibility} type="button">
         <Icon />
       </S.Icon>
     </S.Fieldset>
