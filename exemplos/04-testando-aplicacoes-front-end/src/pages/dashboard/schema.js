@@ -30,7 +30,7 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
     {
       type: 'text',
       name: 'name',
-      placeholder: 'primeiro nome',
+      placeholder: 'nome',
       validations: 'isRequired',
       inputProps: {
         defaultValue: name
@@ -57,6 +57,7 @@ export const createSchema = ({ email, userName: username, password, name, lastNa
       type: 'select',
       name: 'role',
       validations: 'isRequired',
+      placeholder: 'role',
       inputProps: {
         options: [
           { text: 'Usuário', value: 'USER' },
