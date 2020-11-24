@@ -14,8 +14,7 @@ import {
   createUserProfile
 } from '../../store/profiles/actions';
 import { useProfiles } from '../../store/profiles/selectors';
-
-import { logout } from '../../store/user/actions';
+import { logout, checkAuthentication } from '../../store/user/actions';
 import { useAuthentication } from '../../store/user/selectors';
 
 // Components
@@ -44,8 +43,14 @@ const DashboardPage = () => {
   const isFormOpen = isEditing || isCreating;
 
   useEffect(() => {
-    dispatch(loadProfiles());
+    dispatch(checkAuthentication());
   }, []);
+
+  useEffect(() => {
+    if(user.authenticated) {
+      dispatch(loadProfiles());
+    }
+  }, [user]);
 
   const onClickLogout = () => {
     dispatch(logout());
@@ -95,7 +100,7 @@ const DashboardPage = () => {
       <S.Editor active={isFormOpen} role="dialog">
         <Card spacing="double">
           <S.CloseButton>
-            <Button onClick={onCloseEditing} round>
+            <Button onClick={onCloseEditing} round aria-label="fechar">
               <CloseIcon />
             </Button>
           </S.CloseButton>
@@ -113,7 +118,7 @@ const DashboardPage = () => {
         </Card>
       </S.Editor>
       <S.AddButton>
-        <Button onClick={onClickAdd} round type="green" disabled={!user.admin}>
+        <Button onClick={onClickAdd} round type="green" disabled={!user.admin} aria-label="cadastrar">
           <AddIcon />
         </Button>
       </S.AddButton>

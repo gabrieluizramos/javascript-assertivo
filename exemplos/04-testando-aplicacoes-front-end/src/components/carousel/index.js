@@ -22,8 +22,8 @@ const Carousel = ({ items, editable, onClickDelete, onClickEdit }) => {
     <S.Wrapper>
       <Button round icon={<LeftIcon />} onClick={onClickPrev} />
       <S.Carousel ref={ref}>
-        {items.map(item => (
-          <S.Item key={`carousel-item-${item.name}`}>
+        {items.map((item, index) => (
+          <S.Item key={`carousel-item-${item.name}-${index}`}>
             <Profile
               {...item}
               editable={editable}

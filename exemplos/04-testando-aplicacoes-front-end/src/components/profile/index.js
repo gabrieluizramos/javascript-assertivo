@@ -43,8 +43,22 @@ const Profile = ({
         </S.Text>
       </S.Information>
       <S.Actions>
-        <Button type="blue" round disabled={!editable} icon={<EditIcon />} onClick={() => onClickEdit(uid)} />
-        <Button type="red" round disabled={!editable} icon={<DeleteIcon />} onClick={() => onClickDelete(uid)} />
+        <Button
+          type="blue"
+          round
+          disabled={!editable}
+          icon={<EditIcon />}
+          onClick={() => onClickEdit(uid)}
+          aria-label="editar"
+        />
+        <Button
+          type="red"
+          round
+          disabled={!editable}
+          icon={<DeleteIcon />}
+          onClick={() => onClickDelete(uid)}
+          aria-label="deletar"
+        />
       </S.Actions>
     </Card>
   </S.Profile>

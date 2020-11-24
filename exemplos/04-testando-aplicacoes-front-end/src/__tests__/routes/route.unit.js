@@ -1,17 +1,20 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import { renderWithRouter, AnyPage } from '../../testUtils';
 
-import { Redirect } from 'react-router-dom';
-import { paths } from '../../routes/routes';
+// Componente
 import { PrivateRoute } from '../../routes/route';
+// Caminhos das rotas
+import { paths } from '../../routes/routes';
 
+// Mocks
+import { Redirect } from 'react-router-dom';
 import { useAuthentication } from '../../store/user/selectors';
-jest.mock('../../store/user/selectors.js');
-
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   Redirect: jest.fn(),
 }));
+jest.mock('../../store/user/selectors.js');
 
 
 beforeEach(() => {

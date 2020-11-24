@@ -1,7 +1,8 @@
+// Actions
 import * as actions from '../../../store/user/actions';
 
+// Mocks
 import { profile } from '../../../mocks/profile';
-
 import * as auth from '../../../clients/http/authentication';
 jest.mock('../../../clients/http/authentication');
 

@@ -32,6 +32,8 @@ export const CarouselWrapper = styled.div`
 const editor = {
   active: (theme) => css`
     top: 25%;
+    opacity: 1;
+    visibility: visible;
 
     @media (max-width: 800px) {
       top: 0;
@@ -51,6 +53,8 @@ export const Editor = styled.div`
     right: 0;
     transition: ${theme.transition.default};
     letter-spacing: 0.8px;
+    opacity: 0;
+    visibility: hidden;
 
     ${active && editor.active(theme)};
 
