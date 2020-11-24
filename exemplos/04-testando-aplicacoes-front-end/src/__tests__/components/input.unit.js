@@ -1,7 +1,9 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithTheme } from '../../testUtils';
 
+// Componente
 import Input from '../../components/input';
 
 describe('<Input />', () => {

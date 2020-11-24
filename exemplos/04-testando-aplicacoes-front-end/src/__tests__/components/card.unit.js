@@ -1,6 +1,8 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from '../../testUtils';
 
+// Componente
 import Card from '../../components/card';
 
 describe('<Card />', () => {

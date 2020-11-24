@@ -1,8 +1,11 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from '../../testUtils';
 
+// Componente
 import Avatar from '../../components/avatar';
 
+// Mocks
 import { profile } from '../../mocks/profile';
 
 describe('<Avatar />', () => {

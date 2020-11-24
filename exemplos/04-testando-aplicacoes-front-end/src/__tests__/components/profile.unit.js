@@ -1,9 +1,12 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithTheme } from '../../testUtils';
 
+// Componente
 import Profile from '../../components/profile';
 
+// Mocks
 import { profile } from '../../mocks/profile';
 
 describe('<Profile />', () => {

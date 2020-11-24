@@ -1,7 +1,13 @@
+// Reducer e estado inicial
 import reducer, { INITIAL_STATE } from '../../../store/notification/reducer';
+
+// Actions
 import * as actions from '../../../store/notification/actions';
 
+// Actions de usuários
 import * as userActions from '../../../store/user/actions';
+
+// Actions de perfis
 import * as profileActions from '../../../store/profiles/actions';
 
 describe('Reducer de Notificação', () => {

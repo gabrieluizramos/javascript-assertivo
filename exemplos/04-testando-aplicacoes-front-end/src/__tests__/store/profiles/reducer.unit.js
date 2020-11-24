@@ -1,6 +1,10 @@
+// Reducer e estado inicial
 import reducer, { INITIAL_STATE } from '../../../store/profiles/reducer';
+
+// Actions
 import * as actions from '../../../store/profiles/actions';
 
+// Mocks
 import { profile, profileList } from '../../../mocks/profile';
 
 describe('Reducer de Perfis', () => {

@@ -1,8 +1,11 @@
+// Cliente
 import * as auth from '../../../clients/http/authentication';
 
-import { profile as mockProfile } from '../../../mocks/profile';
+// Endpoints
 import endpoints from '../../../clients/http/endpoints';
 
+// Mocks
+import { profile as mockProfile } from '../../../mocks/profile';
 import * as storage from '../../../clients/storage';
 jest.mock('../../../clients/storage.js');
 

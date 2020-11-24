@@ -1,3 +1,4 @@
+// Cliente
 import * as storage from '../../clients/storage';
 
 describe('Cliente de Armazenamento', () => {

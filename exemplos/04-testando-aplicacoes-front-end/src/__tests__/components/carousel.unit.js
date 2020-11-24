@@ -1,8 +1,11 @@
+// Utilitários
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from '../../testUtils';
 
+// Componente
 import Carousel from '../../components/carousel';
 
+// Mock do subcomponente de perfil
 jest.mock('../../components/profile', () => () => <div data-testid="profile" />);
 
 // Poderia ser feito como:
@@ -11,6 +14,7 @@ jest.mock('../../components/profile', () => () => <div data-testid="profile" />)
 //   default: () => <div data-testid="profile" />
 // }));
 
+// Mock de props base
 const BASE_PROPS = {
   editable: true,
   onClickEdit: jest.fn(),

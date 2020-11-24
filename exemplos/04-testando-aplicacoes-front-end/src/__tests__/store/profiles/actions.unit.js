@@ -1,7 +1,8 @@
+// Actions
 import * as actions from '../../../store/profiles/actions';
 
+// Mocks
 import { profile, profileList } from '../../../mocks/profile';
-
 import * as client from '../../../clients/http/profiles';
 jest.mock('../../../clients/http/profiles');
 

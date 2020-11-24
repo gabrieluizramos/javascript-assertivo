@@ -1,3 +1,4 @@
+// Actions
 import * as actions from '../../../store/notification/actions';
 
 describe('Creators', () => {
