@@ -1,17 +1,10 @@
 // Utilitários
-import { screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
+import { screen, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderWithTheme } from '../../testUtils';
+import { renderWithTheme, waitTimersByTime } from '../../testUtils';
 
 // Componente
 import Snackbar from '../../components/snackbar';
-
-// Utilitário para esperar o tempo avançar
-const waitTimersByTime = async time => {
-  await waitFor(() => {
-    jest.advanceTimersByTime(time);
-  });
-};
 
 describe('<Snackbar />', () => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 
 // Providers
 import { BrowserRouter } from 'react-router-dom';
@@ -7,6 +7,11 @@ import Providers from './providers';
 
 // Utils
 export const AnyPage = () => <div data-testid="any page" />
+export const waitTimersByTime = async time => {
+  await waitFor(() => {
+    jest.advanceTimersByTime(time);
+  });
+};
 
 // Renders
 export const renderWithTheme = (ui, options) => render(ui, { wrapper: ThemeProvider, ...options });
