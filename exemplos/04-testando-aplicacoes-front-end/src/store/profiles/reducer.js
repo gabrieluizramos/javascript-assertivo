@@ -12,6 +12,7 @@ import {
   CREATING_USER_PROFILE,
   CREATING_USER_PROFILE_CANCEL,
   CREATE_USER_PROFILE_SUCCESS,
+  CREATE_USER_PROFILE_ERROR,
 
   LOADING_STATUS
 } from './actions';
@@ -74,6 +75,12 @@ const reducer = (state = INITIAL_STATE, action) => {
       }
 
     case CREATING_USER_PROFILE_CANCEL:
+      return {
+        ...state,
+        creating: false
+      }
+
+    case CREATE_USER_PROFILE_ERROR:
       return {
         ...state,
         creating: false

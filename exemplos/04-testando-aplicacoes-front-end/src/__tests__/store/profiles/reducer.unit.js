@@ -78,6 +78,16 @@ describe('Reducer de Perfis', () => {
     expect(state.profiles.length).toEqual(profileCount + 1);
   });
 
+  it('CREATE_USER_PROFILE_ERROR', () => {
+    const creatingState = reducer(INITIAL_STATE, actions.creatingUserProfile());
+    const profileCount = creatingState.profiles.length;
+
+    const state = reducer(creatingState, actions.createUserProfileError());
+
+    expect(state.creating).toEqual(false);
+    expect(state.profiles.length).toEqual(profileCount);
+  });
+
   it('Retorna o estado recebido caso a ação não seja mapeada', () => {
     const state = reducer(INITIAL_STATE, { type: 'ação não mapeada' });
 
