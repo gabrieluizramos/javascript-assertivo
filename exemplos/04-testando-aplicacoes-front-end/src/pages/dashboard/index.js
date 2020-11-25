@@ -41,6 +41,7 @@ const DashboardPage = () => {
   const hasProfiles = profiles.length > 0;
   const isEditing = editing && !!editing.uid;
   const isFormOpen = isEditing || isCreating;
+  const formTitle = isFormOpen && `${isCreating ? 'Criar' : 'Editar' } dados de Perfil`;
 
   useEffect(() => {
     dispatch(checkAuthentication());
@@ -105,7 +106,7 @@ const DashboardPage = () => {
             </Button>
           </S.CloseButton>
           <S.EditorTitle>
-            {isCreating ? 'Criar' : 'Editar'} dados de Perfil
+            {formTitle}
           </S.EditorTitle>
           <S.Form>
             {isFormOpen && (
