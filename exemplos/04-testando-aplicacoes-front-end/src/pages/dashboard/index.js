@@ -94,7 +94,7 @@ const DashboardPage = () => {
         <S.Greetings>
           Olá, {user.info.name}
         </S.Greetings>
-        <Button type="red" onClick={onClickLogout}>
+        <Button type="red" onClick={onClickLogout} aria-label="sair">
           <LogoutIcon />
         </Button>
       </S.Logout>
