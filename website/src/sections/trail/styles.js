@@ -147,7 +147,7 @@ export const TrailContent = styled.div`
       width: 48%;
       background: ${theme.colors.post.color};
       position: absolute;
-      top: 15%;
+      top: 42px;
 
       @media (max-width: 800px) {
         display: none;
