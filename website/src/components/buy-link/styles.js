@@ -25,6 +25,7 @@ export const Link = styled.a`
     display: inline-block;
     font-size: ${theme.font.size.medium};
     padding: ${theme.spacing.default};
+    border-radius: ${theme.radius.half};
 
     ${color ? colors[color](theme) : colors.blue(theme)};
 
