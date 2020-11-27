@@ -9,7 +9,7 @@ const AboutSection = ({ avatar }) => (
     <h3>Sobre o autor</h3>
     <S.Content>
       <S.Avatar>
-        <img src={avatar} alt="Autor" />
+        <img src={avatar} alt="autor" />
       </S.Avatar>
       <S.About>
         <S.Name>Gabriel Ramos</S.Name>

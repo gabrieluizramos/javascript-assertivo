@@ -5,7 +5,7 @@ const email = author.split('<').pop().slice(0, -1)
 module.exports = {
   siteMetadata: {
     title: `JavaScript Assertivo`,
-    description: `Aprenda a testar aplicações JavaScript de ponta-a-ponta utilizando.`,
+    description: `Testar aplicações JavaScript de ponta-a-ponta utilizando conceitos fundamentais e tecnologias de mercado.`,
     author: `@gabrieluizramos`,
     siteUrl: `https://javascriptassertivo.com.br/`,
   },
