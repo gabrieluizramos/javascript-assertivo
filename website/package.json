@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "javascriptassertivo.com.br",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Website do livro JavaScript Assertivo",
   "version": "0.1.0",
-  "license": "0BSD",
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com>",
   "scripts": {
     "build": "gatsby build",
@@ -36,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/gabrieluizramos/javascriptassertivo.com.br"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/gabrieluizramos/javascriptassertivo.com.br/issues"
   }
 }

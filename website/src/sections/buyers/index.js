@@ -2,8 +2,6 @@ import React from 'react';
 
 import Section from '../../components/section';
 
-import * as S from './styles';
-
 const BannerSection = () => (
   <Section light>
     <h3>Para quem se destina esse livro?</h3>

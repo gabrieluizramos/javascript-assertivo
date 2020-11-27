@@ -27,5 +27,10 @@ export const Link = styled.a`
     padding: ${theme.spacing.default};
 
     ${color ? colors[color](theme) : colors.blue(theme)};
+
+    @media (max-width: 800px) {
+      text-align: center;
+      width: 100%;
+    }
   `}
 `;
