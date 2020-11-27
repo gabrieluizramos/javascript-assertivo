@@ -15,7 +15,7 @@ const TrailSection = () => (
             <S.TrailDescription>
               Começamos nossa jornada pelos fundamentos e pelas teorias de
               testes. Antes de qualquer código é necessário saber como as
-              ferramentas e funcionam e como começar a nos acostumar com uma
+              ferramentas funcionam e como começar a nos acostumar com uma
               cultura de testes.
             </S.TrailDescription>
           </S.TrailContent>
@@ -24,8 +24,8 @@ const TrailSection = () => (
           <S.TrailContent>
             <S.TrailTitle>CLI</S.TrailTitle>
             <S.TrailDescription>
-              Após visitar os fundamentos necessários, vamos entender os projeto
-              que será abordado e aplicar testes unitários de forma prática nas
+              Após visitar os fundamentos necessários, vamos entender os projetos
+              que serão abordados e aplicar testes unitários de forma prática nas
               diversas camadas de uma ferramenta de linha de comando (CLI)
             </S.TrailDescription>
           </S.TrailContent>
