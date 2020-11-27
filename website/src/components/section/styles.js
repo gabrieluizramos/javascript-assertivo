@@ -17,6 +17,6 @@ export const Wrapper = styled.div`
     width: 1200px;
     max-width: 90%;
     margin: 0 auto;
-    padding: ${theme.spacing.double};
+    padding: ${theme.spacing.triple} ${theme.spacing.default};
   `};
 `;

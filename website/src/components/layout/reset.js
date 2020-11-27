@@ -6,7 +6,8 @@ export default createGlobalStyle`
     body{
       background: ${theme.colors.black};
       color: ${theme.colors.post.color};
-      font-family: arial;
+      font-family: 'Fira Code', monospace, arial;
+      line-height: 1.8;
     }
 
     * {

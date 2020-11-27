@@ -38,7 +38,8 @@ export default {
     quadruple: `${SPACING * 4}px`
   },
   transition: {
-    default: '.2s ease-in-out'
+    default: '.2s ease-in-out',
+    slow: '0.8s ease'
   },
   radius: {
     default: '4px',

@@ -177,6 +177,5 @@ export const TrailTitle = styled.b`
 export const TrailDescription = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.post.color};
-    line-height: 1.8;
   `}
 `;
