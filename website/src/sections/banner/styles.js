@@ -10,15 +10,18 @@ export const Content = styled.div`
 `;
 
 export const Book = styled.div`
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
+  ${({ theme }) => css`
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
 
-  @media (max-width: 1000px) {
-    width: 100%
-  }
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-top: ${theme.spacing.triple};
+    }
+  `}
 `;
 
 export const About = styled.div`
@@ -36,7 +39,6 @@ export const About = styled.div`
     @media (max-width: 1000px) {
       align-items: center;
       width: 100%;
-      margin-bottom: ${theme.spacing.double};
     }
   `}
 `;
@@ -93,7 +95,7 @@ export const Cover = styled.figure`
       width: 97%;
       height: 97%;
       z-index: -2;
-      background: #44462b;
+      background: #513721;
       transform: translate(10px, 0);
       box-shadow: ${theme.shadow.default};
     }

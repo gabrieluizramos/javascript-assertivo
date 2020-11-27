@@ -9,7 +9,7 @@ const BuyLink = ({ color }) => (
     rel="noreferrer noopener"
     color={color}
   >
-    comprar o livro
+    compre o livro
   </S.Link>
 );
 

@@ -5,8 +5,8 @@ import BuyLink from '../../components/buy-link';
 
 import * as S from './styles';
 
-const CTA = ({ color }) => (
-  <Section>
+const CTA = ({ light, color }) => (
+  <Section light={light}>
     <S.CTA>
       <BuyLink color={color} />
     </S.CTA>

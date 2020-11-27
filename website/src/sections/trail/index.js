@@ -5,7 +5,7 @@ import Section from '../../components/section';
 import * as S from './styles';
 
 const TrailSection = () => (
-  <Section light>
+  <Section>
     <S.Content>
       <h3>Jornada</h3>
       <S.TrailList>
@@ -54,7 +54,7 @@ const TrailSection = () => (
           <S.TrailContent>
             <S.TrailTitle>End-to-End</S.TrailTitle>
             <S.TrailDescription>
-              Para finalizar, vamos aplicar testes e2e para que possamos testar
+              Para finalizar, vamos aplicar testes E2E para que possamos testar
               a aplicação de ponta-a-ponta e garantir que nossos principais
               fluxos estão funcionando ao simular uma pessoa real interagindo
               com nosso software.

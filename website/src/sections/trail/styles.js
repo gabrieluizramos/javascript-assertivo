@@ -3,10 +3,6 @@ import styled, { css } from 'styled-components';
 export const Content = styled.div`
   ${({ theme }) => css`
     text-align: center;
-
-    & > * {
-      margin-bottom: ${theme.spacing.default};
-    }
   `}
 `;
 
@@ -49,7 +45,7 @@ export const TrailItem = styled.li`
 
     @media (max-width: 800px) {
       &:not(:last-child) {
-        margin-bottom: ${theme.spacing.double};
+        margin-bottom: ${theme.spacing.triple};
       }
     }
 
@@ -123,7 +119,7 @@ export const TrailContent = styled.div`
     position: relative;
     text-align: center;
     width: 50%;
-    background: ${theme.colors.post.background};
+    background: ${theme.colors.black};
 
     & > * {
       margin: ${theme.spacing.default} auto 0;
