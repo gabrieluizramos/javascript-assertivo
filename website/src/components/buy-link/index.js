@@ -1,16 +1,14 @@
 import React from 'react';
 
-import * as S from './styles';
+import Link from '../link';
 
 const BuyLink = ({ color }) => (
-  <S.Link
+  <Link
     href="https://www.casadocodigo.com.br/"
-    target="_blank"
-    rel="noreferrer noopener"
     color={color}
   >
     compre o livro
-  </S.Link>
+  </Link>
 );
 
 export default BuyLink;

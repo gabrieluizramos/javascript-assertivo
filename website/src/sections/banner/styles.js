@@ -9,6 +9,15 @@ export const Content = styled.div`
   }
 `;
 
+export const Links = styled.div`
+  display: flex;
+  width: 100%;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
 export const Book = styled.div`
   ${({ theme }) => css`
     width: 35%;

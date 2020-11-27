@@ -7,7 +7,7 @@ import * as S from './styles';
 const TrailSection = () => (
   <Section>
     <S.Content>
-      <h3>Jornada</h3>
+      <h3>Conheça a jornada</h3>
       <S.TrailList>
         <S.TrailItem>
           <S.TrailContent>

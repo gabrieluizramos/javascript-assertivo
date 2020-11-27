@@ -17,21 +17,45 @@ const colors = {
       opacity: 0.9;
     }
   `,
+  green: (theme) => css`
+    background: ${theme.colors.terminal.green};
+    color: ${theme.colors.white};
+
+    &:hover {
+      opacity: 0.9;
+    }
+  `
 }
 
 export const Link = styled.a`
   ${({ theme, color }) => css`
     transition: ${theme.transition.default};
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: ${theme.font.size.medium};
     padding: ${theme.spacing.default};
     border-radius: ${theme.radius.half};
+    text-align: center;
 
     ${color ? colors[color](theme) : colors.blue(theme)};
 
-    @media (max-width: 800px) {
-      text-align: center;
+    svg {
+      width: ${theme.spacing.onehalf};
+      margin-left: ${theme.spacing.default};
+    }
+
+    & + a {
+      margin-left: ${theme.spacing.default};
+    }
+
+    @media (max-width: 1000px) {
       width: 100%;
+
+      & + a {
+        margin-left: 0;
+        margin-top: ${theme.spacing.default};
+      }
     }
   `}
 `;

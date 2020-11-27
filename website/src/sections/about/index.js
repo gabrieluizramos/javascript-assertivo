@@ -21,15 +21,19 @@ const AboutSection = ({ avatar }) => (
           @gabrieluizramos
         </S.Username>
         <p>
-          Gabriel Ramos é pintor de pixel (ou, desenvolvedor, como algumas
-          pessoas preferem chamar), mentor na Laboratória e instrutor na Caelum.
+          Gabriel Ramos é pintor de pixel (ou desenvolvedor, como algumas
+          pessoas preferem chamar) e instrutor em projetos relacionados ao
+          ensino da tecnologia.
         </p>
         <p>
           Já passou por empresas de diversos tamanhos e segmentos: de
           e-commerces e companhias mais consolidadas à startups unicórnios com
-          produtos emergentes. Na grande maioria das experiências teve contato
-          com tudo que envolve o ecossistema JavaScript, desde aplicações
-          front-end à ferramentas e back-end em NodeJS.
+          produtos emergentes.
+        </p>
+        <p>
+          Na grande maioria de suas experiências teve contato com os mais variados assuntos que envolvem o
+          ecossistema JavaScript, desde aplicações front-end à ferramentas e
+          back-end.
         </p>
       </S.About>
     </S.Content>

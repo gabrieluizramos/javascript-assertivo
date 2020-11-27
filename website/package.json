@@ -27,7 +27,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "styled-icons": "^10.22.0"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",

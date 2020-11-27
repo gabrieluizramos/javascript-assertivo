@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const CTA = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
 `;
