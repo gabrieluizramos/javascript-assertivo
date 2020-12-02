@@ -121,3 +121,20 @@ export const Cover = styled.figure`
     }
   `}
 `;
+
+export const Text = styled.span`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: ${theme.colors.post.background};
+    font-size: ${theme.font.size.biggest};
+    opacity: 0.7;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  `}
+`;
