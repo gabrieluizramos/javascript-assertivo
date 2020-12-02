@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({
+export const SEO = ({
   description,
   lang = 'pt-br',
   meta = [],
@@ -24,7 +24,7 @@ const SEO = ({
     `
   )
 
-  const image = banner ? banner.image.childImageSharp.fluid.src : '';
+  const image = banner ? banner.childImageSharp.fixed.src : '';
   const metaDescription = description || site.siteMetadata.description;
 
   const metas = [
@@ -54,7 +54,7 @@ const SEO = ({
         },
         {
           name: `twitter:card`,
-          content: 'summary_large_image',
+          content: 'summary',
         },
         {
           name: `twitter:image`,
@@ -88,5 +88,3 @@ const SEO = ({
     </Helmet>
   )
 }
-
-export default SEO;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { Layout } from '../components/layout';
+import Layout, { SEO } from '../components/layout';
 
 import BannerSection from '../sections/banner';
 import CTA from '../sections/cta';
@@ -17,6 +17,7 @@ export default function Home({
 }) {
   return (
     <Layout>
+      <SEO banner={file} />
       <BannerSection cover={file} />
       <BuyersSection />
       <TrailSection />
