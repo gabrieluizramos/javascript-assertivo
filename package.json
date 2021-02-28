@@ -17,10 +17,5 @@
   "bugs": {
     "url": "https://github.com/gabrieluizramos/javascriptassertivo.com.br/issues"
   },
-  "homepage": "https://github.com/gabrieluizramos/javascriptassertivo.com.br#readme",
-  "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
-  }
+  "homepage": "https://github.com/gabrieluizramos/javascriptassertivo.com.br#readme"
 }

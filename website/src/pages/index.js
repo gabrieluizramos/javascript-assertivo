@@ -1,40 +1,43 @@
 import React from 'react';
-import Layout from '../components/layout';
+import { graphql } from 'gatsby';
 
-import styled from 'styled-components';
+import Layout, { SEO } from '../components/layout';
 
-const Page = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  height: 100vh;
-  overflow: hidden;
-`;
+import BannerSection from '../sections/banner';
+import CTA from '../sections/cta';
+import TrailSection from '../sections/trail';
+import BuyersSection from '../sections/buyers';
+import AboutSection from '../sections/about';
 
-const Stripe = styled.h1`
-  width: 100%;
-  padding: 150px 30px;
-  color: #dadada;
-  background: #202020;
-  letter-spacing: 2px;
-  text-align: center;
-  transform: skewY(25deg);
-  font-weight: 100;
-  & > * {
-    display: block;
-    transform: skewY(-25deg);
+export default function Home({
+  data: {
+    gravatar: { url: avatar },
+    file
   }
-`;
-
-export default function Home() {
+}) {
   return (
     <Layout>
-      <Page>
-        <Stripe>
-          <span>Em breve</span>
-        </Stripe>
-      </Page>
+      <SEO banner={file} />
+      <BannerSection cover={file} />
+      <BuyersSection />
+      <TrailSection />
+      <CTA light color="red" />
+      <AboutSection avatar={avatar} />
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    gravatar(email: { eq: "gabriel.luiz.ramos@gmail.com" }) {
+      url
+    }
+    file(relativePath: { eq: "cover.jpg" }) {
+      childImageSharp {
+        fixed(width: 280, height: 380) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;

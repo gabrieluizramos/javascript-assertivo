@@ -135,6 +135,7 @@ export const Text = styled.span`
     opacity: 0.7;
     z-index: 1;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 10px;
   `}
 `;

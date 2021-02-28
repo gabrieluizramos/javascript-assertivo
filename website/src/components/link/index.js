@@ -2,15 +2,15 @@ import React from 'react';
 
 import * as S from './styles';
 
-const BuyLink = ({ href, color, children }) => (
+const Link = ({ href, color, children, disabled }) => (
   <S.Link
     target="_blank"
     rel="noreferrer noopener"
-    href={href}
-    color={color}
+    href={!disabled && href}
+    color={disabled ? 'disabled' : color}
   >
     {children}
   </S.Link>
 );
 
-export default BuyLink;
+export default Link;

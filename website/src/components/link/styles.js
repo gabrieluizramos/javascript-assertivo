@@ -4,26 +4,19 @@ const colors = {
   red: (theme) => css`
     background: ${theme.colors.red};
     color: ${theme.colors.white};
-
-    &:hover {
-      opacity: 0.9;
-    }
   `,
   blue: (theme) => css`
     background: ${theme.colors.terminal.blue.default};
     color: ${theme.colors.white};
-
-    &:hover {
-      opacity: 0.9;
-    }
   `,
   green: (theme) => css`
     background: ${theme.colors.terminal.green};
     color: ${theme.colors.white};
-
-    &:hover {
-      opacity: 0.9;
-    }
+  `,
+  disabled: (theme) => css`
+    background: ${theme.colors.post.color};
+    color: ${theme.colors.post.background};
+    cursor: not-allowed;
   `
 }
 
@@ -39,6 +32,10 @@ export const Link = styled.a`
     text-align: center;
 
     ${color ? colors[color](theme) : colors.blue(theme)};
+
+    &:hover {
+      opacity: 0.9;
+    }
 
     svg {
       width: ${theme.spacing.onehalf};
