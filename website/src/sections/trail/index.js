@@ -26,7 +26,7 @@ const TrailSection = () => (
             <S.TrailDescription>
               Após visitar os fundamentos necessários, vamos entender os projetos
               que serão abordados e aplicar testes unitários de forma prática nas
-              diversas camadas de uma ferramenta de linha de comando (CLI)
+              diversas camadas de uma ferramenta de linha de comando (CLI).
             </S.TrailDescription>
           </S.TrailContent>
         </S.TrailItem>
@@ -52,7 +52,7 @@ const TrailSection = () => (
         </S.TrailItem>
         <S.TrailItem>
           <S.TrailContent>
-            <S.TrailTitle>End-to-End</S.TrailTitle>
+            <S.TrailTitle>End-to-end</S.TrailTitle>
             <S.TrailDescription>
               Para finalizar, vamos aplicar testes E2E para que possamos testar
               a aplicação de ponta-a-ponta e garantir que nossos principais
