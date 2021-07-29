@@ -28,7 +28,7 @@ Dentro da pasta `src` encontra-se o código fonte da aplicação, divido da segu
   - `redux`: provê a configuração para a utilização do Redux como gerenciamento global de estado;
   - `theme`: provê o tema da aplicação para reuso dos componentes.
 - `routes`: configurações para utilização das rotas públicas e privadas;
-- `store`: arquivos relacionados ao estado global da aplicação, contém as configurações principais nos arquivos `index.js`, as configurações de middlewares em `middlewares.js` e a composição dos em `reducers.js`. Também possui as subpastas, cada uma com suas respectivas `actions`, `reducers` e `selectors` sendo:
+- `store`: arquivos relacionados ao estado global da aplicação, contém as configurações principais nos arquivos `index.js`, as configurações de middlewares em `middlewares.js` e a composição dos reducers em `reducers.js`. Também possui as subpastas, cada uma com suas respectivas `actions`, `reducers` e `selectors` sendo:
   - `notification`: relacionada à notificações de sucesso/erro;
   - `profiles`: relacionada aos dados de perfis de usuários;
   - `user`: relacionada aos dados do usuário de autenticado.
