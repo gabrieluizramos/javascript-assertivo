@@ -15,7 +15,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-describe('getUserData encontra as informações à partir de um uid', () => {
+describe('getUserData encontra as informações a partir de um uid', () => {
   it('Insere as informações encontradas no objeto da requisição', async () => {
     const user = createUser();
     const req = createReq({ cookies: { uid: user.uid } });
