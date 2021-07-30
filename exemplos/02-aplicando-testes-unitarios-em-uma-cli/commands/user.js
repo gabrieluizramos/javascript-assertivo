@@ -9,7 +9,7 @@ export const createUser = ({ role = ROLES.USER, ...concat } = {}) => ({
   password: faker.internet.password(),
   name: faker.name.firstName(),
   lastName: faker.name.lastName(),
-  uid: faker.random.uuid(),
+  uid: faker.datatype.uuid(),
   avatar: faker.internet.avatar(),
   role,
   ...concat,

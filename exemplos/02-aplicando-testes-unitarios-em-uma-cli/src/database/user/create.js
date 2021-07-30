@@ -13,7 +13,7 @@ export const createUser = async ({
   ...rest
 }) => {
   const users = await loadDatabase();
-  const uid = faker.random.uuid();
+  const uid = faker.datatype.uuid();
   const user = { email, password, userName, name, lastName, role, uid, ...rest };
 
   users.push(user);
