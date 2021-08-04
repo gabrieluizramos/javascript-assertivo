@@ -1,4 +1,4 @@
-# Exemplos
+# Projetos
 Material com projetos de exemplo e testes desenvolvidos ao longo do livro.
 
 1. [Fundamentos de Testes](./01-fundamentos-de-testes): conteúdo da primeira parte, onde abordamos os fundamentos e as ferramentas de testes que serão utilizadas;
