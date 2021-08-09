@@ -2,6 +2,8 @@ import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
   ${({ theme }) => css`
+    @import url('https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap');
+
     html,
     body{
       background: ${theme.colors.black};
