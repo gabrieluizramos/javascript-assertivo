@@ -14,7 +14,7 @@ const BannerSection = ({ cover }) => (
     <S.Content>
       <S.About>
         <S.Title>JavaScript Assertivo</S.Title>
-        <S.Subtitle>Testando aplicações de ponta-a-ponta</S.Subtitle>
+        <S.Subtitle>Testes e qualidade de código em todas as camadas da aplicação</S.Subtitle>
         <p>
           Chegou a hora de testar todas as camadas de uma aplicação JavaScript.
         </p>
