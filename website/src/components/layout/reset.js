@@ -8,7 +8,6 @@ export default createGlobalStyle`
     body{
       background: ${theme.colors.black};
       color: ${theme.colors.post.color};
-      font-family: 'Fira Code', monospace, arial;
       line-height: 1.8;
     }
 
@@ -31,6 +30,7 @@ export default createGlobalStyle`
       box-sizing: border-box;
       z-index: 0;
       outline: none;
+      font-family: 'Fira Code', monospace, arial;
     }
   `}
 `;

@@ -8,6 +8,7 @@ import CTA from '../sections/cta';
 import TrailSection from '../sections/trail';
 import BuyersSection from '../sections/buyers';
 import AboutSection from '../sections/about';
+import Newsletter from '../sections/newsletter';
 
 export default function Home({
   data: {
@@ -23,6 +24,7 @@ export default function Home({
       <TrailSection />
       <CTA light color="red" />
       <AboutSection avatar={avatar} />
+      <Newsletter />
     </Layout>
   );
 }
