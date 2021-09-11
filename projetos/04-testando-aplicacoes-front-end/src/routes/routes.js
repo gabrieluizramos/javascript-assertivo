@@ -6,11 +6,11 @@ export const paths = {
   dashboard: '/dashboard'
 };
 
-export default [
+const routes = [
   {
     page: Dashboard,
     path: paths.dashboard,
-    auth: true
+    authenticated: true
   },
   {
     page: Login,
@@ -18,3 +18,4 @@ export default [
   }
 ];
 
+export default routes;

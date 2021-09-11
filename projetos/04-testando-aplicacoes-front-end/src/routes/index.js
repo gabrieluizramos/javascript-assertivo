@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { BaseRoute, PrivateRoute } from './route';
+import { PubicRoute, PrivateRoute } from './route';
 import routes from './routes';
 
 const Routes = () => (
@@ -10,8 +10,8 @@ const Routes = () => (
       {routes.map(({
         path,
         page: Page,
-        auth = false,
-        Route = auth ? PrivateRoute : BaseRoute
+        authenticated = false,
+        Route = authenticated ? PrivateRoute : PubicRoute
       }) => (
         <Route path={path} key={`route-${path}`}>
           <Page />

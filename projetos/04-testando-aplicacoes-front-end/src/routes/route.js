@@ -1,4 +1,4 @@
-import { Route as BaseRoute, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { useAuthentication } from '../store/user/selectors';
 
 import { paths } from './routes';
@@ -8,11 +8,11 @@ export const PrivateRoute = ({ children, ...props }) => {
   const render = () => authenticated ? children : <Redirect to={{ pathname: paths.home }} />
 
   return (
-    <BaseRoute
+    <Route
       {...props}
       render={render}
     />
   );
 };
 
-export { BaseRoute };
+export const PubicRoute = Route;
