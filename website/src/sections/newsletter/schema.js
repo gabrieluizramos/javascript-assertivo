@@ -11,7 +11,7 @@ export default {
       type: 'email',
       name: 'email',
       label: 'Email',
-      placeholder: 'seu.email.mais@top.com',
+      placeholder: 'seu.melhor@email.com',
       validations: 'isEmail'
     },
   ],
