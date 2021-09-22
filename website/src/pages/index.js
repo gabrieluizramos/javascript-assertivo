@@ -13,13 +13,13 @@ import Newsletter from '../sections/newsletter';
 export default function Home({
   data: {
     gravatar: { url: avatar },
-    file
+    cover
   }
 }) {
   return (
     <Layout>
-      <SEO banner={file} />
-      <BannerSection cover={file} />
+      <SEO banner={cover} />
+      <BannerSection cover={cover} />
       <BuyersSection />
       <TrailSection />
       <CTA light color="red" />
@@ -34,9 +34,9 @@ export const pageQuery = graphql`
     gravatar(email: { eq: "gabriel.luiz.ramos@gmail.com" }) {
       url
     }
-    file(relativePath: { eq: "cover.jpg" }) {
+    cover: file(relativePath: { eq: "cover.jpg" }) {
       childImageSharp {
-        fixed(width: 280, height: 380) {
+        fixed(width: 260, height: 390) {
           ...GatsbyImageSharpFixed
         }
       }

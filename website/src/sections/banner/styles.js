@@ -66,8 +66,8 @@ export const Subtitle = styled.h2`
 
 export const Cover = styled.figure`
   ${({ theme }) => css`
-    width: 280px;
-    height: 380px;
+    width: 260px;
+    height: 390px;
     transform: rotateY(-10deg);
     transition: ${theme.transition.slow};
     position: relative;
