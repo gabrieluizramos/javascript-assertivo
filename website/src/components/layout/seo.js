@@ -6,7 +6,6 @@ export const SEO = ({
   description,
   lang = 'pt-br',
   meta = [],
-  title,
   banner
 }) => {
   const { site } = useStaticQuery(
@@ -29,12 +28,16 @@ export const SEO = ({
 
   const metas = [
         {
+          name: 'author',
+          content: site.siteMetadata.author
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -66,7 +69,7 @@ export const SEO = ({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
