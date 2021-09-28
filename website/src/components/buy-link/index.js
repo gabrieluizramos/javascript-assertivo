@@ -8,7 +8,7 @@ const BuyLink = ({ color }) => (
     color={color}
     disabled
   >
-    compre o livro
+    compre o livro (em breve)
   </Link>
 );
 

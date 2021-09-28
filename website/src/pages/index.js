@@ -34,7 +34,7 @@ export const pageQuery = graphql`
     gravatar(email: { eq: "gabriel.luiz.ramos@gmail.com" }) {
       url
     }
-    cover: file(relativePath: { eq: "cover.jpg" }) {
+    cover: file(relativePath: { eq: "cover.png" }) {
       childImageSharp {
         fixed(width: 260, height: 390) {
           ...GatsbyImageSharpFixed

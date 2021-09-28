@@ -30,6 +30,7 @@ export const Field = styled.input`
     color: ${theme.colors.white};
     font-size: ${theme.font.size.default};
     border: 2px solid ${theme.colors.white};
+    border-radius: ${theme.radius.half};
   `}
 `;
 

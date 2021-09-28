@@ -7,7 +7,7 @@ import validators from './helpers/validators';
 
 import * as S from './styles';
 
-const Form = ({ schema, onSubmit: submit, disabled }) => {
+const Form = ({ schema, onSubmit: submit, disabled = true }) => {
   const fieldsWithValidations = schema.fields.filter(field =>  field.validations && field.validations.length);
   const [fields, setFields] = useState(
     fieldsWithValidations.reduce((validations, field) => ({...validations, [field.name]: false }), {})

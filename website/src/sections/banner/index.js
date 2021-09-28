@@ -31,7 +31,6 @@ const BannerSection = ({ cover }) => (
       </S.About>
       <S.Book>
         <S.Cover>
-          <S.Text>em breve</S.Text>
           <Img fixed={cover.childImageSharp.fixed} />
         </S.Cover>
       </S.Book>

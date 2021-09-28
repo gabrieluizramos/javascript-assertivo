@@ -7,19 +7,19 @@ export const Button = styled.button`
     font-size: ${theme.font.size.default};
     transition: .2s ease-in-out;
     border: 2px solid ${theme.colors.white};
+    border-radius: ${theme.radius.half};
     background: ${theme.colors.white};
 
     &:not([disabled]) {
       &:hover {
-        background: transparent;
-        color: ${theme.colors.white};
+        opacity: 0.9;
       }
     }
 
     &[disabled] {
-      cursor: initial;
+      cursor: not-allowed;
       background: ${theme.colors.post.color};
       border-color: ${theme.colors.post.color};
     }
-    `}
+  `}
 `;
