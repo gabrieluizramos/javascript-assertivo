@@ -24,7 +24,7 @@ const BannerSection = ({ cover }) => (
         </p>
         <S.Links>
           <BuyLink />
-          <Link href="http://bit.ly/javascript-assertivo" color="green">
+          <Link href="https://github.com/gabrieluizramos/javascript-assertivo" color="green">
             acesse o repositório <GithubIcon />
           </Link>
         </S.Links>
