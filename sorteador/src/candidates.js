@@ -4,10 +4,5 @@ import { promises } from 'fs';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
-const files = {
-  input: 'input.json',
-  output: 'output.json'
-};
-
-export const getCandidates = () => require(`../data/${files.input}`);
-export const writeWinners = winners => promises.writeFile(`./data/${files.output}`, toString(winners));
+export const getCandidates = () => require('../data/input.json');
+export const writeWinners = winners => promises.writeFile('./data/output.json', toString(winners));

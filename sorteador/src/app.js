@@ -1,4 +1,5 @@
 import logger from '@jsassertivo/cli/src/utils/logger.js';
+import { toString } from '@jsassertivo/cli/src/database/parser.js';
 import { generateRandomWinner } from './random.js';
 import { getCandidates, writeWinners } from './candidates.js';
 
@@ -18,12 +19,11 @@ export default async function (amount) {
       candidates = candidates.filter((_, index) => index !== number);
     }
 
-    logger.log('E quem ganhou foi... 🥁');
-    logger.success(winners);
+    logger.success('E quem ganhou foi... 🥁');
+    logger.log(toString(winners));
+
     await writeWinners(winners);
   } catch ({ message }) {
     logger.error('Erro ao gerar ganhadores', message);
   }
 }
-
-
