@@ -1,0 +1,16 @@
+{
+  "name": "@jsassertivo/sorteador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sortear": "node ."
+  },
+  "dependencies": {
+    "@jsassertivo/cli": "file://../projetos/02-aplicando-testes-unitarios-em-uma-cli"
+  },
+  "keywords": [],
+  "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br/)",
+  "license": "ISC"
+}
