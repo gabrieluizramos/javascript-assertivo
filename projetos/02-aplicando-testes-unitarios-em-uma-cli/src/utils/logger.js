@@ -3,7 +3,7 @@ const TEXT = '%s';
 const resetAfterLog = color => `${color}${TEXT}${RESET}`;
 
 export const COLORS = {
-  DEFAULT: resetAfterLog('\x1b[0m$'),
+  DEFAULT: resetAfterLog('\x1b[0m'),
   GREEN: resetAfterLog('\x1b[32m'),
   RED: resetAfterLog('\x1b[31m')
 };
