@@ -7,9 +7,9 @@ jobs:
   deploy_website:
     runs-on: ubuntu-latest
     name: Deploy website
-    defaults:
-      run:
-        working-directory: ./website
+    # defaults:
+    #   run:
+    #     working-directory: ./website
 
     steps:
     - name: Checkout
@@ -20,15 +20,17 @@ jobs:
         node-version: '15'
 
     - name: Install
+      working-directory: ./website
       run: npm install
 
     - name: Build
+      working-directory: ./website
       run: npm run build
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
         branch: gh-pages
-        folder: public
+        folder: ./website/public
         git-config-name: Deployment bot
         git-config-email: deployment-bot@example.com
