@@ -47,7 +47,7 @@ const Newsletter = () => {
           <Emoji aria-label="caixa de correspondências" content="📬" /> Newsletter
         </S.Title>
         <S.Text>
-          Fique por dentro das novidades sobre livro e posts do autor
+          Fique por dentro das novidades sobre livro (como sorteios e lançamento) e posts do autor.
         </S.Text>
         <S.Form>
           <Form schema={schema} onSubmit={onSubmit} disabled={sending} />
