@@ -1,7 +1,9 @@
 # Sorteador
-Essa ferramenta tem o intuito de facilitar dinâmicas de sorteio do livro.
+Essa ferramenta tem o intuito de facilitar dinâmicas de sorteio do livro e tornar as dinâmicas mais simples, claras e divertidas!
 
 Ela funciona gerando um número aleatório em uma determinada lista de participantes.
+
+![demo](./images/demo.gif)
 
 ## Como utilizar
 No arquivo [`data/input.json`](./data/input.json) forneça os dados de quem estará participando no sorteio como email, nome, contato, ou qualquer informação.

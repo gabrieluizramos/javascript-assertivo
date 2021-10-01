@@ -1,6 +1,32 @@
 # Histórico de sorteios
 Contém o histórico dos sorteios realizados, com uma breve descrição sobre os eventos em que ocorreram, suas datas e nome de quem ganhou.
 
-### Evento: lançamento do livro
-#### Data: a ser definida
-##### Sorteados ⏳
+![gif Gatsby com taça de champagne](./images/congrats.gif)
+
+### Tech Week (IFSP - Cubatão)
+#### 05/10/2021
+Em breve ⏳
+
+---
+
+### Lançamento do livro (geral)
+#### 08/10/2021
+Em breve ⏳
+
+---
+
+### Lançamento do livro (Laboratória SAP-004)
+#### 08/10/2021
+Em breve ⏳
+
+---
+
+### Lançamento do livro (Laboratória SAP-005)
+#### 08/10/2021
+Em breve ⏳
+
+---
+
+### Lançamento do livro (Laboratória SAP-006)
+#### 08/10/2021
+Em breve ⏳
