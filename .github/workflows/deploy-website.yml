@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy_website:
+    runs-on: ubuntu-latest
+    name: Deploy website
+    defaults:
+      run:
+        working-directory: ./website
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '15'
+
+    - name: Install
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: public
+        git-config-name: Deployment bot
+        git-config-email: deployment-bot@example.com
