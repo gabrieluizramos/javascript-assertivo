@@ -11,7 +11,7 @@ Sua estrutura é composta pelas seguintes pastas:
 <table>
   <tr>
     <td>
-      <a href="#" target="_blank"><img src="./website/src/images/cover.png" width="350px" /></a>
+      <a href="http://javascriptassertivo.com.br/" target="_blank"><img src="./website/src/images/cover.png" width="350px" /></a>
     </td>
     <td>
       <p>
