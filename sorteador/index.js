@@ -1,4 +1,4 @@
-import execute from './src/app.js';
+import cli from './src/cli.js';
 
 const [,, amount = 1] = process.argv;
-execute(amount);
+cli(amount);
