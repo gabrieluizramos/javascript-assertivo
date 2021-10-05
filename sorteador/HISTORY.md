@@ -3,6 +3,8 @@ Contém o histórico dos sorteios realizados, com uma breve descrição sobre os
 
 ![gif Gatsby com taça de champagne](./images/congrats.gif)
 
+## Resultados
+
 ### Tech Week (IFSP - Cubatão)
 #### 05/10/2021
 Em breve ⏳
