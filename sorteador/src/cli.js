@@ -1,8 +1,8 @@
 import logger from '@jsassertivo/cli/src/utils/logger.js';
 import { toString } from '@jsassertivo/cli/src/database/parser.js';
+
 import { generateRandomWinner } from './random.js';
 import { getCandidates, writeWinners } from './candidates.js';
-
 import { messages, errors, during } from './messages.js';
 
 export default async function (amount) {
@@ -27,17 +27,17 @@ export default async function (amount) {
 
       candidates = candidates.filter((_, index) => index !== number);
     }
-    await during();
+    await during(1);
 
 
     logger.log(messages.letTheDrumsRoll);
-    await during();
+    await during(1);
     let drums = 2;
     while(drums--) {
-      await during();
+      await during(1);
       logger.log(messages.drum);
     }
-    await during();
+    await during(1);
 
     logger.log(messages.winners);
     await during(5);
