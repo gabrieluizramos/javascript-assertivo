@@ -7,7 +7,7 @@ Contém o histórico dos sorteios realizados, com uma breve descrição sobre os
 
 ### Tech Week (IFSP - Cubatão)
 #### 05/10/2021
-Em breve ⏳
+##### Gilmar
 
 ---
 
