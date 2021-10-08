@@ -31,4 +31,4 @@ Em breve ⏳
 
 ### Lançamento do livro (Laboratória SAP-006)
 #### 08/10/2021
-Em breve ⏳
+Tauana
