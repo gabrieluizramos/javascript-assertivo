@@ -11,24 +11,26 @@ Contém o histórico dos sorteios realizados, com uma breve descrição sobre os
 
 ---
 
-### Lançamento do livro (geral)
-#### 08/10/2021
-Em breve ⏳
-
----
-
 ### Lançamento do livro (Laboratória SAP-004)
 #### 08/10/2021
-Em breve ⏳
+Karina
 
 ---
 
 ### Lançamento do livro (Laboratória SAP-005)
 #### 08/10/2021
-Em breve ⏳
+Juliane
 
 ---
 
 ### Lançamento do livro (Laboratória SAP-006)
 #### 08/10/2021
 Tauana
+
+---
+
+### Lançamento do livro (geral)
+#### 11/10/2021
+Em breve ⏳
+
+---
