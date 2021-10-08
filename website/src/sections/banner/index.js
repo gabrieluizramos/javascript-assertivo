@@ -30,9 +30,11 @@ const BannerSection = ({ cover }) => (
         </S.Links>
       </S.About>
       <S.Book>
-        <S.Cover>
-          <Img fixed={cover.childImageSharp.fixed} />
-        </S.Cover>
+        <S.Link href="https://www.casadocodigo.com.br/products/livro-javascript-assertivo" target="_blank">
+          <S.Cover>
+            <Img fixed={cover.childImageSharp.fixed} />
+          </S.Cover>
+        </S.Link>
       </S.Book>
     </S.Content>
   </Section>

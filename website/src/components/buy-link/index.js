@@ -4,11 +4,10 @@ import Link from '../link';
 
 const BuyLink = ({ color }) => (
   <Link
-    href="https://www.casadocodigo.com.br/"
+    href="https://www.casadocodigo.com.br/products/livro-javascript-assertivo"
     color={color}
-    disabled
   >
-    ⏳ compre o livro (em breve)
+    compre o livro
   </Link>
 );
 

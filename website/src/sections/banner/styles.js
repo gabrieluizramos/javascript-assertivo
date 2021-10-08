@@ -33,6 +33,11 @@ export const Book = styled.div`
   `}
 `;
 
+export const Link = styled.a`
+  display: block;
+  transform-style: preserve-3d;
+`;
+
 export const About = styled.div`
   ${({ theme }) => css`
     display: flex;
