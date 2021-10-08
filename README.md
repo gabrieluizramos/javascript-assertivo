@@ -11,7 +11,7 @@ Sua estrutura é composta pelas seguintes pastas:
 <table>
   <tr>
     <td>
-      <a href="http://javascriptassertivo.com.br/" target="_blank"><img src="./website/src/images/cover.png" width="350px" /></a>
+      <a href="https://www.casadocodigo.com.br/products/livro-javascript-assertivo" target="_blank"><img src="./website/src/images/cover.png" width="350px" /></a>
     </td>
     <td>
       <p>
@@ -19,7 +19,7 @@ Sua estrutura é composta pelas seguintes pastas:
         <br /><br />
         De uma simples ferramenta de linha de comando, à uma aplicação Back-end que expõe uma API e uma aplicação Front-end.
       </p>
-      <a href="https://javascriptassertivo.com.br/" target="_blank">Acesse o site</a> | <a href="#" target="_blank">Compre o livro</a>
+      <a href="https://javascriptassertivo.com.br/" target="_blank">Acesse o site</a> | <a href="https://www.casadocodigo.com.br/products/livro-javascript-assertivo" target="_blank">Compre o livro</a>
     </td>
   </tr>
 </table>
