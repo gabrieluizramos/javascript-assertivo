@@ -99,6 +99,24 @@ Para ler seus dados, basta executar:
 jsassertivo --username=admin --password=admin --operation=read --data='{"uid": "3511baa5-2939-43f1-bb2c-70b80702770d"}'
 ```
 
+**Observação**
+
+Caso você utilize **Windows PowerShell**, pode ser que ocorra um erro ao fornecer os dados como `JSON` fazendo com que a função `JSON.parse` dentro do arquivo `src/database/parser.js` não funcione como esperado. Isso é uma particularidade do PowerShell que pode ser facilmente contornada.
+
+Caso você tenha esse problema, será necessário escapar as aspas duplas do `JSON` fornecido no campo `data` usando uma barra (`\`) antes de cada uma das aspas duplas (`"`).
+
+Ao invés de fornecer o campo assim:
+```
+--data='{"uid": "3511baa5-2939-43f1-bb2c-70b80702770d"}'
+```
+
+Para que funcione corretamente, pode ser que você precise fornecer assim:
+```
+--data='{\"uid\": \"3511baa5-2939-43f1-bb2c-70b80702770d\"}'
+```
+
+E isso deverá ser repetido para as demais operações.
+
 ### Create
 Por exemplo, pensando em um usuário com a seguinte estrutura:
 ```json

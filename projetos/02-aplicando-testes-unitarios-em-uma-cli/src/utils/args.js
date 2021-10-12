@@ -30,7 +30,7 @@ export const validateArgs = (args = {}, fields = DEFAULT_FIELDS) => {
 
 // Recebe cada argumento como --nome=valor e retorna um objeto com { nome: valor }
 const formatArg = ([firstDash, secondDash, ...rest]) => {
-  const arg = rest.join('')
+  const arg = rest.join('');
   let [key, value] = arg.split('=');
   value = key === 'data' ? toJSON(value) : value;
 
