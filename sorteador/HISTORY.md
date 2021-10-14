@@ -30,7 +30,7 @@ Tauana
 ---
 
 ### Lançamento do livro (geral)
-#### 13/10/2021
-Em breve ⏳
+#### 14/10/2021
+Ailton
 
 ---
