@@ -7,30 +7,31 @@ Contém o histórico dos sorteios realizados, com uma breve descrição sobre os
 
 ### Tech Week (IFSP - Cubatão)
 #### 05/10/2021
-##### Gilmar
+##### 🏆 Gilmar
 
 ---
 
 ### Lançamento do livro (Laboratória SAP-004)
 #### 08/10/2021
-Karina
+##### 🏆 Karina
 
 ---
 
 ### Lançamento do livro (Laboratória SAP-005)
 #### 08/10/2021
-Juliane
+##### 🏆 Juliane
 
 ---
 
 ### Lançamento do livro (Laboratória SAP-006)
 #### 08/10/2021
-Tauana
+##### 🏆 Tauana
 
 ---
 
 ### Lançamento do livro (geral)
 #### 14/10/2021
-Ailton
+##### 🚫 <del>Ailton</del> (não consegui entrar em contato, email não respondido)
+##### ⏳ Fernando (aguardando resposta)
 
 ---
