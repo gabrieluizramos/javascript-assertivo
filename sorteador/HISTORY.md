@@ -32,6 +32,7 @@ Contém o histórico dos sorteios realizados, com uma breve descrição sobre os
 ### Lançamento do livro (geral)
 #### 14/10/2021
 ##### 🚫 <del>Ailton</del> (não consegui entrar em contato, email não respondido)
-##### ⏳ Fernando (aguardando resposta)
+##### 🚫 <del>Fernando</del> (não consegui entrar em contato, email não respondido)
+##### ⏳ Rafael (aguardando resposta)
 
 ---
