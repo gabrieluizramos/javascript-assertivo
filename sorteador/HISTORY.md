@@ -54,4 +54,4 @@ Esse ciclo deve se repetir até que o cupom seja entregue pra uma pessoa que res
 #### 14/10/2021
 ##### 🚫 <del>Ailton</del>
 ##### 🚫 <del>Fernando</del>
-##### ⏳ Rafael
+##### 🏆 Rafael
