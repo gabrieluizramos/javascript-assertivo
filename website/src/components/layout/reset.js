@@ -32,5 +32,10 @@ export default createGlobalStyle`
       outline: none;
       font-family: 'Fira Code', monospace, arial;
     }
+
+    ::selection {
+      background: ${theme.colors.post.color};
+      color: ${theme.colors.post.background};
+    }
   `}
 `;
