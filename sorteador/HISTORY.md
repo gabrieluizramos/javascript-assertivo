@@ -55,3 +55,9 @@ Esse ciclo deve se repetir até que o cupom seja entregue pra uma pessoa que res
 ##### 🚫 <del>Ailton</del>
 ##### 🚫 <del>Fernando</del>
 ##### 🏆 Rafael
+
+---
+
+### Pesquisa (Laboratória SAP-007)
+#### 06/05/2022
+##### 🏆 Leticia
