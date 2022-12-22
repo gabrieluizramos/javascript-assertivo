@@ -11,9 +11,8 @@ export const Content = styled.div`
 
 export const Avatar = styled.figure`
   ${({ theme }) => css`
-    min-width: 150px;
-    width: 150px;
-    height: 150px;
+    min-width: 200px;
+    height: 200px;
     border: 2px solid ${theme.colors.post.color};
     border-radius: 50%;
     overflow: hidden;

@@ -4,12 +4,12 @@ import Section from '../../components/section';
 
 import * as S from './styles';
 
-const AboutSection = ({ avatar }) => (
+const AboutSection = () => (
   <Section>
     <h3>Sobre o autor</h3>
     <S.Content>
       <S.Avatar>
-        <img src={avatar} alt="autor" />
+        <img src="https://github.com/gabrieluizramos.png" alt="autor" />
       </S.Avatar>
       <S.About>
         <S.Name>Gabriel Ramos</S.Name>

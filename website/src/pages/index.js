@@ -12,7 +12,6 @@ import Newsletter from '../sections/newsletter';
 
 export default function Home({
   data: {
-    gravatar: { url: avatar },
     cover
   }
 }) {
@@ -23,7 +22,7 @@ export default function Home({
       <BuyersSection />
       <TrailSection />
       <CTA light color="red" />
-      <AboutSection avatar={avatar} />
+      <AboutSection />
       <Newsletter />
     </Layout>
   );
@@ -31,9 +30,6 @@ export default function Home({
 
 export const pageQuery = graphql`
   query {
-    gravatar(email: { eq: "gabriel.luiz.ramos@gmail.com" }) {
-      url
-    }
     cover: file(relativePath: { eq: "cover.png" }) {
       childImageSharp {
         fixed(width: 260, height: 390) {
