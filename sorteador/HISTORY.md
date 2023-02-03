@@ -67,3 +67,9 @@ Esse ciclo deve se repetir até que o cupom seja entregue pra uma pessoa que res
 ### Inauguração do TestCamp (Laboratória SAP-008)
 #### 08/08/2022
 ##### 🏆 Sara
+
+---
+
+### Inauguração do TestCamp (Laboratória SAP-009)
+#### 30/01/2023
+##### 🏆 Aline
