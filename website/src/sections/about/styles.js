@@ -16,11 +16,18 @@ export const Avatar = styled.figure`
     border: 2px solid ${theme.colors.post.color};
     border-radius: 50%;
     overflow: hidden;
+    background: url(https://fotografia.gabrieluizramos.com.br/images/crow.thumb.webp) no-repeat center center;
+    background-size: cover;
 
     & > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: ${theme.transition.default};
+    }
+
+    &:hover img {
+      opacity: 0;
     }
   `}
 `;
