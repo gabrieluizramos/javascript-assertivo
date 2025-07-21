@@ -9,7 +9,9 @@ export const COLORS = {
 };
 
 const log = (msg, ...args) => {
-  console.log(COLORS.DEFAULT, msg, ...args);
+  // Ensure sensitive data is not logged
+  const sanitizedMsg = msg.replace(/password:\s*\S+/gi, 'password: [REDACTED]');
+  console.log(COLORS.DEFAULT, sanitizedMsg, ...args);
 };
 
 const success = (msg, ...args) => {
